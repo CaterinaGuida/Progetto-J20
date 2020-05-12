@@ -1,4 +1,4 @@
-# Progetto di Ingegneria del SW
+# Progetto di Ingegneria del SW - EMETTITRICE
 
 Questo progetto ha come obbiettivo la realizzazione di un sistema 
 software che permetta ad un utente l'acquisto di titoli di viaggio
