@@ -1,7 +1,4 @@
-# Progetto di Ingegneria del SW - EMETTITRICE
+# URBAN PAVIA - Emettitrice di biglietti e relativo sistema di controllo
 
-Questo progetto ha come obbiettivo la realizzazione di un sistema 
-software che permetta ad un utente l'acquisto di titoli di viaggio
-presso emettitrici automatiche.
-Inoltre un secondo sistema si occuperà della verifica della validità 
-titoli di viaggio.
+Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e l'attivazione di titoli di viaggio per il servizio urbano di Pavia. Il progetto prevede anche la realizzazione di un sistema per il controllo della validità di un titolo di viaggio.
+
