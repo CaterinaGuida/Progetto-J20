@@ -1,0 +1,72 @@
+/* CLASSE CHE ACCEDE AL DATABASE PER MEMORIZZARE L'ACQUISTO DI UN TITOLO DI VIAGGIO */
+
+package dao;
+
+import java.sql.*;
+import model.*;
+import java.text.SimpleDateFormat;
+
+public class DaoPurchase {
+	
+	private DaoFactory Dao;
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+	public DaoPurchase(DaoFactory Dao) {
+		super();
+		this.Dao = Dao;
+	}
+	
+	public void addSingleTicket(SingleTicket tic) {	
+		try {
+			
+			Connection con = Dao.getConnection();
+			Statement st= con.createStatement();
+			String query=String.format("insert into titoli(codice,tipo,purchaseDate) values('%s','singolo','%s')",tic.getTicketCode(),sdf.format(tic.getPurchaseDate()));
+			st.executeUpdate(query);
+			con.close();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+public void addCumulativo(CumulativeTicket tic) {
+		
+		
+		try {
+			
+			Connection con = Dao.getConnection();
+			Statement st= con.createStatement();
+			String query=String.format("insert into titoli(codice,tipo,purchaseDate,numviaggi) values('%s','cumulativo','%s','%d')",tic.getTicketCode(),sdf.format(tic.getPurchaseDate()), tic.getTripsNumber());
+			st.executeUpdate(query);
+			con.close();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void addAbbonamento(Pass tic) {
+		
+		
+		try {
+			
+			Connection con = Dao.getConnection();
+			Statement st= con.createStatement();
+			Statement st1= con.createStatement();
+			String query=String.format("insert into titoli(codice,tipo,purchaseDate) values('%s','abbonamento','%s')",tic.getTicketCode(),sdf.format(tic.getPurchaseDate()));
+			st.executeUpdate(query);
+			String query1=String.format("insert into abbonamento(id,firstName,lastName,expirarionDate,duration) values('%s','%s','%s','%s','%s')",tic.getTicketCode(),tic.getFirstName(),tic.getLastName(),sdf.format(tic.getExpirationDate()),tic.getDuration().toString());
+			st1.executeUpdate(query1);
+			con.close();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+
+}

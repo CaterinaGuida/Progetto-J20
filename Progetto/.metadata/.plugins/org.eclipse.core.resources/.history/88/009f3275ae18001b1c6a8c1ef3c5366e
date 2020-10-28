@@ -1,0 +1,209 @@
+/* CLASSE CHE ACCEDE AL DATABASE PER MEMORIZZARE L'ATTIVAZIONE DI UN TITOLO DI VIAGGIO */
+
+package dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DaoActivation {
+	
+	private DaoFactory Dao;
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+	public DaoActivation(DaoFactory Dao) {
+		super();
+		this.Dao = Dao;
+	}
+
+	public String[] activation(String code) throws ParseException {
+		Connection con;
+		try {
+			con = Dao.getConnection();
+			Statement st = con.createStatement();
+			String query = String.format("select count(*) as number from purchased_travel_documents where code = '%s'", code); 
+			ResultSet result = st.executeQuery(query);
+			int number=0;
+			while(result.next()) {
+				number= result.getInt("number");
+			}
+			if (number==0) {
+				String output[]= new String[2];
+				output[0]= "Titolo non esistente";
+				return output;
+			}
+			else{
+				
+				query=String.format("select * from purchased_travel_documents where code='%s'",code);
+				ResultSet  res= st.executeQuery(query);
+				String type= "";
+				int tripsNum=0;
+				while(res.next()) {
+					type= res.getString("type");
+					if(type.equals("cumulative")){
+						tripsNum= res.getInt("tripsNum");
+					}
+				}
+				
+				
+				if(type.equals("single")) {
+					
+					query=String.format("select count(*) as number from attivati where id='%s'",code);
+					ResultSet risultati= st.executeQuery(query);
+					int numero=0;
+					while(risultati.next()) {
+						numero= risultati.getInt("number");
+					}
+					if (numero==0) {
+						
+						Date date= new Date();
+						date.setHours(date.getHours()+1);
+						query=String.format("insert into attivati(id,expirarionDate,numviaggi_mancanti) values('%s','%s',0)",code,sdf.format(date));
+						st.executeUpdate(query);
+						String output[]= new String[3];
+						output[0]= "Titolo Attivato";
+						output[1]= "Biglietto viaggio singolo";
+						output[2]= sdf.format(date);
+						return output;
+					}
+					else{
+						query=String.format("select *  from attivati where id='%s'",code);
+						risultati= st.executeQuery(query);
+						Date date=null;
+						while(risultati.next()) {
+							date= sdf.parse(risultati.getString("expirarionDate"));
+							if(date.before(new Date())) {
+								System.out.println("Biglietto scaduto");
+								String output[]= new String[3];
+								output[0]= "Titolo Scaduto";
+								output[1]= "Biglietto viaggio singolo";
+								output[2]= sdf.format(date);
+								return output;
+							}
+							else {
+								System.out.println("Biglietto valido");
+								String output[]= new String[3];
+								output[0]= "Titolo Attivato";
+								output[1]= "Biglietto viaggio singolo";
+								output[2]= sdf.format(date);
+								return output;
+							}
+							
+						}
+						
+						
+					}
+				}
+				
+				
+				else if(type.equals("cumulative")) {
+					
+					query=String.format("select count(*) as number from attivati where id='%s'",code);
+					ResultSet risultati= st.executeQuery(query);
+					int numviaggi_mancanti=0;
+					int numero=0;
+					while(risultati.next()) {
+						numero= risultati.getInt("number");
+						
+					}
+					if (numero==0) {
+						
+						Date date= new Date();
+						date.setHours(date.getHours()+1);
+						query=String.format("insert into attivati(id,expirarionDate,numviaggi_mancanti) values('%s','%s','%d')",code,sdf.format(date),tripsNum-1);
+						st.executeUpdate(query);
+						String output[]= new String[4];
+						output[0]= "Titolo cumulativo Attivato";
+						output[1]= "Biglietto cumulativo";
+						output[2]= sdf.format(date);
+						output[3]= ""+(tripsNum-1);
+						return output;
+					}
+					else {
+						System.out.println("biglietto cum makjd attivato ");
+						query=String.format("select *  from attivati where id='%s'",code);
+						risultati= st.executeQuery(query);
+						Date date=null;
+						while(risultati.next()) {
+							date= sdf.parse(risultati.getString("expirarionDate"));
+							numviaggi_mancanti= risultati.getInt("numviaggi_mancanti");
+							if(date.before(new Date()) && numviaggi_mancanti==0) {
+								
+								String output[]= new String[3];
+								output[0]= "Titolo Scaduto";
+								output[1]= "Biglietto cumulativo";
+								output[2]= sdf.format(date);
+								return output;
+							}
+							else if(date.before(new Date()) && numviaggi_mancanti>0) {
+								query=String.format("delete  from attivati where id='%s'",code);
+								st.executeUpdate(query);
+								date= new Date();
+								date.setHours(date.getHours()+1);
+								query=String.format("insert into attivati(id,expirarionDate,numviaggi_mancanti) values('%s','%s','%d')",code,sdf.format(date),numviaggi_mancanti-1);
+								st.executeUpdate(query);
+								String output[]= new String[4];
+								output[0]= "Titolo cumulativo Attivato";
+								output[1]= "Biglietto cumulativo";
+								output[2]= sdf.format(date);
+								output[3]= ""+(numviaggi_mancanti-1);
+								return output;
+								
+							}
+							else if(date.after(new Date())) {
+								String output[]= new String[4];
+								output[0]= "Titolo cumulativo Attivato";
+								output[1]= "Biglietto cumulativo";
+								output[2]= sdf.format(date);
+								output[3]= ""+(numviaggi_mancanti);
+								return output;
+								
+							}
+						}
+					}
+					
+				}
+				
+				
+				
+				else if(type.equals("pass")) {
+					
+					query=String.format("select * from passes where id='%s'",code);
+					ResultSet risultati= st.executeQuery(query);
+					Date date=null;
+					while(risultati.next()) {
+						date= sdf.parse(risultati.getString("expirarionDate"));
+						if(date.before(new Date())) {
+							String output[]= new String[3];
+							output[0]= "Titolo Scaduto";
+							output[1]= "Abbonamento";
+							output[2]= sdf.format(date);
+							return output;
+						}
+						else {
+							
+							String output[]= new String[3];
+							output[0]= "Titolo valido";
+							output[1]= "Abbonamento";
+							output[2]= sdf.format(date);
+							return output;
+						}
+					}
+				}
+				
+			}
+			return null;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+		
+	}
+}

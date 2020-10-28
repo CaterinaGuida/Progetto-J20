@@ -1,0 +1,79 @@
+/* Oggetto di accesso al database per la memorizzazione di un titolo di viaggio acquistato */
+
+package dao;
+
+import java.sql.*;
+
+import model.*;
+import java.text.SimpleDateFormat;
+
+
+
+public class DaoRegister {
+	
+	private DaoFactory Dao;
+	private SimpleDateFormat str=new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+
+	public DaoRegister(DaoFactory Dao){
+		super();
+		this.Dao=Dao;
+		
+	}
+	
+	public void addSingolo(SingleTicket titolo) {
+		
+		
+		try {
+			
+			Connection con = Dao.getConnection();
+			Statement st= con.createStatement();
+			String query=String.format("insert into titoli(codice,tipo,purchaseDate) values('%s','singolo','%s')",titolo.getTicketCode(),str.format(titolo.getPurchaseDate()));
+			st.executeUpdate(query);
+			con.close();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+public void addCumulativo(CumulativeTicket titolo) {
+		
+		
+		try {
+			
+			Connection con = Dao.getConnection();
+			Statement st= con.createStatement();
+			String query=String.format("insert into titoli(codice,tipo,purchaseDate,numviaggi) values('%s','cumulativo','%s','%d')",titolo.getTicketCode(),str.format(titolo.getPurchaseDate()), titolo.getTripsNumber());
+			st.executeUpdate(query);
+			con.close();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void addAbbonamento(Pass titolo) {
+		
+		
+		try {
+			
+			Connection con = Dao.getConnection();
+			Statement st= con.createStatement();
+			Statement st1= con.createStatement();
+			String query=String.format("insert into titoli(codice,tipo,purchaseDate) values('%s','abbonamento','%s')",titolo.getTicketCode(),str.format(titolo.getPurchaseDate()));
+			st.executeUpdate(query);
+			String query1=String.format("insert into abbonamento(id,nome,cognome,expirarionDate,durata) values('%s','%s','%s','%s','%s')",titolo.getTicketCode(),titolo.getNome(),titolo.getCognome(),str.format(titolo.getExpirationDate()),titolo.getDurata().toString());
+			st1.executeUpdate(query1);
+			con.close();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+
+}

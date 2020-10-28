@@ -1,0 +1,54 @@
+package model;
+
+import java.util.Date;
+
+public class Pass extends TravelDocument{
+	private String nome;
+	private String cognome;
+	private Duration durata;
+
+	public Pass(Duration durata, String nome,String cognome) {
+		super();
+		this.nome=nome;
+		this.cognome=cognome;
+		this.durata= durata;
+		this.data_expirazione= (Date) this.data_acquisto.clone();
+		
+		if(durata== Duration.SETTIMANALE)
+			this.data_expirazione.setDate(this.data_acquisto.getDate()+7);
+		
+		if(durata== Duration.MENSILE)
+		
+			this.data_expirazione.setMonth(this.data_acquisto.getMonth()+1);
+		
+		if(durata== Duration.ANNUALE)
+			
+			this.data_expirazione.setYear(this.data_acquisto.getYear()+1);
+		
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+
+	public Duration getDurata() {
+		return durata;
+	}
+
+	public void setDurata(Duration durata) {
+		this.durata = durata;
+	}
+	
+}
