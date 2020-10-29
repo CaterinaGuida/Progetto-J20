@@ -19,13 +19,13 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 2) Scaricare ed installare Apache Tomcat 8.5: https://tomcat.apache.org/download-80.cgi
 3) Importare il progetto in Eclipse (File -> Import -> General -> Projects from Folder or Archive)
 4) Avviare il server
-   4a) (Window -> Preferences -> Server -> Runtime Environments -> Add)
-   4b) Scegliere Apache Tomcat v8.5 e cliccare su Next
-   4c) Cliccare su Browse per inserire la directory in cui è stato installato Apache Tomcat 8.5
-   4d) Cliccare su Finish
-   4e) (Window -> Show View -> Other... -> Server -> Servers -> Open)
-   4f) Cliccare su No servers are available nel riquadro che si apre in basso
-   4g) (Next -> Add -> Finish)
-   4h) Fare doppio click su Tomcat v8.5 Server at localhost
-   4i) Impostare la porta 9090 nel campo Tomcat admin port e salvare
+4a) (Window -> Preferences -> Server -> Runtime Environments -> Add)
+4b) Scegliere Apache Tomcat v8.5 e cliccare su Next
+4c) Cliccare su Browse per inserire la directory in cui è stato installato Apache Tomcat 8.5
+4d) Cliccare su Finish
+4e) (Window -> Show View -> Other... -> Server -> Servers -> Open)
+4f) Cliccare su No servers are available nel riquadro che si apre in basso
+4g) (Next -> Add -> Finish)
+4h) Fare doppio click su Tomcat v8.5 Server at localhost
+4i) Impostare la porta 9090 nel campo Tomcat admin port e salvare
 5) Andare in WebContent, premere il tasto destro su index.jsp, spostarsi su Run As e cliccare su Run on Server
