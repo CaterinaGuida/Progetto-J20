@@ -46,4 +46,8 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 
    4.9) Impostare la porta 9090 nel campo Tomcat admin port e salvare
 
-5) Andare in WebContent, premere il tasto destro su index.jsp, spostarsi su Run As e cliccare su Run on Server
+5) Modificare le credenziali di accesso al database nella classe DaoFactory
+
+6) Modificare il percorso del file logo.png nella classe Ricevuta
+
+7) Andare in WebContent, premere il tasto destro su index.jsp, spostarsi su Run As e cliccare su Run on Server
