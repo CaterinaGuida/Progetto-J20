@@ -9,9 +9,25 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="C:/Users/matte/Desktop/Progetto-J20/urban/WebContent/WEB-INF/lib/itextpdf-5.5.13.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/matte/Desktop/Progetto-J20/urban/WebContent/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/matte/Desktop/Progetto-J20/urban/WebContent/WEB-INF/lib/mysql-connector-java-8.0.22.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/matte/Desktop/Progetto-J20/urban/WebContent/WEB-INF/lib/itextpdf-5.5.13.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/matte/Desktop/Progetto-J20/urban/WebContent/WEB-INF/lib/javax.servlet-api-3.1.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/matte/Desktop/Progetto-J20/urban/WebContent/WEB-INF/lib/mysql-connector-java-8.0.22.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
