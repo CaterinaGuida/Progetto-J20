@@ -1,5 +1,0 @@
-package model;
-
-public enum Duration {
-	SETTIMANALE,MENSILE,ANNUALE;
-}
