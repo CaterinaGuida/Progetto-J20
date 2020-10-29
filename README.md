@@ -14,7 +14,7 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 
 4) Aprire lo script "inspector.sql" per aggiungere un controllore
 
-   4.1) Scegliere uno *username* e una *password* e sostituire tali valori al posto di *name* e *pass* rispettivamente
+   4.1) Scegliere un *username* e una *password* e sostituire tali valori al posto di *name* e *pass* rispettivamente
 
 5) Eseguire lo script "inspector.sql" per aggiungere il controllore al database
 
