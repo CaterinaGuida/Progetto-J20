@@ -1,1 +1,0 @@
-insert into urban.inspectors(username, password) values ('name', 'pass');
