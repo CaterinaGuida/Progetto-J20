@@ -1,0 +1,43 @@
+/* servlet che gestisce la richiesta di controllo della validità di un titolo di viaggio 
+ * il cui codice è stato specificato da un controllore.
+ * Essa utilizza il metodo check della classe DaoChecker.
+ */
+
+
+package controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.ParseException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.DaoActivation;
+import dao.DaoValidation;
+import dao.DaoFactory;
+
+public class CheckerServlet extends HttpServlet {
+	
+	public void service(HttpServletRequest req, HttpServletResponse res) {
+		
+		PrintWriter out;
+		try {
+			out = res.getWriter();
+			String codice= (String) req.getParameter("codice");
+			DaoFactory dao= DaoFactory.getInstance();
+			DaoValidation dc= dao.getChecker();
+			String output[]=dc.check(codice);
+			req.getSession().setAttribute("output", output);
+			req.getRequestDispatcher("/check.jsp").forward(req, res);
+			//out.println(output[0]);
+			
+		} catch (IOException | ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

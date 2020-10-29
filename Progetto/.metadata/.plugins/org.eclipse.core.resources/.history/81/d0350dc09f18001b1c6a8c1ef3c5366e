@@ -1,0 +1,67 @@
+package model;
+
+import java.util.Date;
+import java.util.Random;
+
+public abstract class TravelDocument {
+	protected String ticketCode;
+	protected Date data_acquisto;
+	protected Date data_expirazione;
+	protected double prezzo;
+
+	public TravelDocument() {
+		this.ticketCode=this.generatecodice();
+		this.data_acquisto=new Date();
+		this.data_expirazione=null;
+		
+	}
+
+	public Date getData_acquisto() {
+		return data_acquisto;
+	}
+
+	public Date getData_expirazione() {
+		return data_expirazione;
+	}
+
+	public String getCodice_titolo() {
+		return ticketCode;
+	}
+
+	public void setCodice_titolo(String ticketCode) {
+		this.ticketCode = ticketCode;
+	}
+
+	
+	public double getPrezzo() {
+		return prezzo;
+	}
+
+	public void setPrezzo(double prezzo) {
+		this.prezzo = prezzo;
+	}
+
+	private String generatecodice() {
+		String alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		Random rand1= new Random();
+		int num= rand1.nextInt(10000);
+		Random rand2= new Random();
+		String cod="";
+		for(int i=0;i<5;i++) {
+			int n= rand2.nextInt(52);
+			cod= cod+ alpha.charAt(n);
+		}
+		cod=cod+num;
+		return cod;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

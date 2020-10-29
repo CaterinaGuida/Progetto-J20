@@ -1,0 +1,68 @@
+/* servlet che gestisce la richiesta di un abbonamento da parte di un utente.
+ * Essa istanzia un oggetto della classe Abbonamento del package model.
+ * Lo memorizza nel database utilizzando il metodo addAbbonamento della classe DaoRegister.
+ * Poi genera una ricevuta nel formato pdf e la ritorna all'utente.
+ */
+
+package controller;
+import dao.*;
+
+
+
+
+import javax.servlet.http.HttpServlet;
+import model.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.*;
+
+public class AbbonamentoServlet extends HttpServlet {
+
+		public void service(HttpServletRequest req, HttpServletResponse res) {
+			
+			try {
+				String nome= (String) req.getSession().getAttribute("nome");
+				String cognome= (String) req.getSession().getAttribute("cognome");
+				String durata= (String) req.getSession().getAttribute("durata");
+				double prezzo= (Double) req.getSession().getAttribute("prezzo");
+				
+				DaoFactory dao=  DaoFactory.getInstance();
+				DaoRegister dr= dao.getDaoRegister();
+				
+				Pass ab=  new Pass(Duration.ANNUALE,nome,cognome);
+				
+				if(durata.equals("SETTIMANA")) {
+					ab= new Pass(Duration.SETTIMANALE,nome,cognome);
+				}
+				else if(durata.equals("MESE")) {
+					ab= new Pass(Duration.MENSILE,nome,cognome);
+				}
+
+				dr.addAbbonamento(ab);
+				res.setContentType("application/pdF;charset=UTF-8");
+				res.addHeader("Content-Disposition","inline; filename"+"biglietto.pdf");
+				ab.setPrezzo(prezzo);
+				Ricevuta ricevuta= new Ricevuta();
+				
+				//out = res.getWriter();
+				/*out.println("<h1>Biglietto Singolo</h1>"); 
+				out.println("Codice Titolo: "+biglietto.getCodice_titolo()+"<br>");
+				out.println("Data acquisto : " +biglietto.getData_acquisto()+"<br>");
+				String query=String.format("<a href='%s' >Scarica il tuo titolo</a>", "ricevute/biglietto.pdf");
+				out.println(query);*/
+				ServletOutputStream out= res.getOutputStream();
+				ByteArrayOutputStream baos= ricevuta.generateAbbonamento(ab);
+				baos.writeTo(out);
+				
+				
+			} catch (IOException  e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+}

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: matte
+Build-Jdk: 15.0.1
+Implementation-Title: iText
+Implementation-Version: 5.5.9
+Implementation-Vendor-Id: com.itextpdf
+Created-By: Maven Integration for Eclipse
+Implementation-Build: 
+
