@@ -1,0 +1,15 @@
+package model;
+
+import java.util.Date;
+
+public class Biglietto extends Titolo {
+
+	public Biglietto() {
+		super();
+		
+	}
+
+	
+	
+
+}

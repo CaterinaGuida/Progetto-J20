@@ -1,0 +1,163 @@
+package model;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
+import java.io.ByteArrayOutputStream;
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfWriter;
+
+public class Receipt {
+    private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 28, Font.BOLD);
+    private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL, BaseColor.RED);
+    private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL);
+    private static Font smallB = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, BaseColor.BLUE);
+    
+    private String path =  "D:\\eclipse-workspace\\urban\\WebContent\\static\\logo.png";
+    
+    public Receipt() {
+    	
+    }
+
+	public  ByteArrayOutputStream generateSingleTicket(SingleTicket travel) {
+		ByteArrayOutputStream bout = new ByteArrayOutputStream();
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
+			Image image1 = Image.getInstance(path);
+			image1.setAlignment(Element.ALIGN_JUSTIFIED);
+			Document document = new Document();
+			PdfWriter.getInstance(document, bout);
+			document.open();
+			document.add(image1);
+			document.add(new Paragraph(""));
+			document.add(new Paragraph(""));
+			document.add(new Paragraph("BIGLIETTO SINGOLO", catFont));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("Codice: \t" + travel.getTicketCode(), subFont));
+			document.add(new Paragraph(""));
+			document.add(new Paragraph("Data di acquisto: \t "+sdf.format(travel.purchaseDate),subFont));
+			document.add(new Paragraph("Ora acquisto : \t "+sdf2.format(travel.purchaseDate),subFont));
+			document.add(new Paragraph("Prezzo : \t "+"1.5€",subFont));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("NB: questo titolo di vaggio è valido un'ora a partire dal momento dell'attivazione. ",smallB));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("La Preghiamo Di Sempre Indossare La Mascherina Durante Tutta La Durata del viaggio. ",redFont));
+			document.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return bout;
+	}
+
+	public  ByteArrayOutputStream generatecumulativo(CumulativeTicket travel) {
+
+		ByteArrayOutputStream bout= new ByteArrayOutputStream();
+		try {
+			
+			
+			SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+			SimpleDateFormat sdf2=new SimpleDateFormat("HH:mm:ss");
+			Image image1 = Image.getInstance(path);
+			image1.setAlignment(Element.ALIGN_JUSTIFIED);
+			Document document= new Document();
+			PdfWriter.getInstance(document, bout);
+			document.open();
+			document.add(image1);
+			document.add(new Paragraph(""));
+			document.add(new Paragraph(""));
+			document.add(new Paragraph("Biglietto Cumulativo", catFont));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("Codice : \t"+travel.getTicketCode(),subFont));
+			document.add(new Paragraph(""));
+			document.add(new Paragraph("Data di acquisto : \t "+sdf.format(travel.purchaseDate),subFont));
+			document.add(new Paragraph("Ora acquisto : \t "+sdf2.format(travel.purchaseDate),subFont));
+			document.add(new Paragraph("Numero Viaggi : \t "+travel.getTripsNumber(),subFont));
+			document.add(new Paragraph("Prezzo : \t "+travel.getPrice()+"€",subFont));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("NB: questo titolo di vaggio è attivabile "+ travel.getTripsNumber() +" volte ed è valido durante 1 ora dopo ogni attivazione. ",smallB));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("La Preghiamo Di Sempre Indossare La Mascherina Durante Tutta La Durata del viaggio. ",redFont));
+			document.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return bout;
+	}
+	
+	public  ByteArrayOutputStream generateAbbonamento(Pass travel) {
+
+		ByteArrayOutputStream bout= new ByteArrayOutputStream();
+		try {
+			
+			
+			SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+			SimpleDateFormat sdf2=new SimpleDateFormat("HH:mm:ss");
+			Image image1 = Image.getInstance(path);
+			image1.setAlignment(Element.ALIGN_JUSTIFIED);
+			Document document= new Document();
+			PdfWriter.getInstance(document, bout);
+			document.open();
+			document.add(image1);
+			document.add(new Paragraph(""));
+			document.add(new Paragraph(""));
+			document.add(new Paragraph("Abbonamento", catFont));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("Codice : \t"+travel.getTicketCode(),subFont));
+			document.add(new Paragraph(""));
+			document.add(new Paragraph("Nome del titolare : \t "+travel.getFirstName(),subFont));
+			document.add(new Paragraph("Cognome del titolare : \t "+travel.getLastName(),subFont));
+			document.add(new Paragraph("Durata : \t "+travel.getDuration(),subFont));
+			document.add(new Paragraph("Data di acquisto : \t "+sdf.format(travel.getPurchaseDate()),subFont));
+			document.add(new Paragraph("Ora acquisto : \t "+sdf2.format(travel.purchaseDate),subFont));
+			document.add(new Paragraph("Data expirazione : \t "+sdf.format(travel.getExpirationDate()),subFont));
+			document.add(new Paragraph("Prezzo : \t "+travel.getPrice()+"€",subFont));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("NB: Si può viaggiare illimitatamente durante il periodo di validità di questo titolo di viaggio",smallB));
+			document.add(new Paragraph(" "));
+			document.add(new Paragraph("La Preghiamo Di Sempre Indossare La Mascherina Durante Tutta La Durata del viaggio ",redFont));
+			document.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return bout;
+	}
+	
+
+	
+
+}
+
+

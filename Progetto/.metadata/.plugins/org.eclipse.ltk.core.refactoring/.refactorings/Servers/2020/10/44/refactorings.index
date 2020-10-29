@@ -1,0 +1,45 @@
+1603672081419	Rename type 'Biglietto'
+1603812978478	Delete element
+1603812982364	Delete element
+1603812988467	Delete element
+1603813104709	Rename type 'AbbonamentoServlet'
+1603813119735	Rename type 'AttivazioneServlet'
+1603813184024	Rename type 'BigliettoCumulativoServlet'
+1603813195288	Rename type 'BigliettoSingoloServlet'
+1603813207362	Rename type 'SingleTicket'
+1603813216027	Rename type 'CumulativeTicket'
+1603813240288	Rename type 'CheckerServlet'
+1603813266184	Rename type 'DaoActiver'
+1603813277963	Rename type 'DaoChecker'
+1603813313434	Rename type 'DaoRegister'
+1603813329883	Rename type 'DaoLoger'
+1603813336779	Delete element
+1603813343678	Rename type 'Abbonamento'
+1603813354048	Rename type 'Cumulativo'
+1603813385354	Rename type 'Durata'
+1603813412278	Rename type 'Ricevuta'
+1603813418889	Rename type 'Singolo'
+1603813448706	Rename type 'Titolo'
+1603813469717	Rename type 'CheckTest'
+1603813479341	Rename type 'RegistrationTest'
+1603835643438	Rename type 'Abbonamento'
+1603835653973	Rename type 'Biglietto'
+1603835665787	Rename type 'Cumulativo'
+1603835673117	Rename type 'Durata'
+1603835680296	Rename type 'Ricevuta'
+1603835705040	Rename type 'Titolo'
+1603840123058	Rename type 'DaoActiver'
+1603840157060	Rename type 'DaoChecker'
+1603840168518	Rename type 'DaoLoger'
+1603840179429	Rename type 'DaoRegister'
+1603844376021	Rename type 'AbbonamentoServlet'
+1603844389680	Rename type 'AttivazioneServlet'
+1603844405015	Rename type 'BigliettoCumulativoServlet'
+1603844414675	Rename type 'BigliettoSingoloServlet'
+1603844425142	Rename type 'CheckerServlet'
+1603845401260	Rename type 'CheckTest'
+1603845411306	Rename type 'RegistrationTest'
+1603922901118	Copy packages
+1603922963402	Copy folder
+1603923001167	Copy folder
+1603923010303	Copy folder
