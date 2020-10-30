@@ -61,3 +61,13 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 7) A questo punto, cliccare con il tasto destro su *index.jsp*, spostarsi su *Run As* e cliccare su *Run on Server*
 
 8) Copiare il link su un browser
+
+# LIBRERIE
+
+1) ITEXTPDF v. 5.5.9
+
+2) JUNIT 5
+
+3) MYSQL-CONNECTOR-JAVA v. 8.0.21
+
+4) SERVLET-API
