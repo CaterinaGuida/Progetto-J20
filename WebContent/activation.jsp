@@ -28,6 +28,7 @@
         padding-top:5%;
       }
       h1{
+      	margin-top:50px;
         color:white;
         text-align:center;
         font-family:sans-serif;
@@ -35,18 +36,17 @@
         font-size:3em;
       }
       h2{
-        color:red;
-        margin-left:28%;
+        color:green;
+        margin-left:18%;
         font-family:sans-serif;
         font-size:2em;
       }
       em{
-        color:white;
+        color:green;
         text-align:right;
-        margin-left:10%;
         font-size:1em;
       }  
-
+/*
    @media only screen and (min-height: 800px) {
      #content{
      	padding-top:150px;
@@ -56,7 +56,7 @@
      	margin-left:25%;
      }
      }
-
+*/
     </style>
   </head>
   <% 
@@ -69,33 +69,28 @@
       <h1>Attivazione</h1>
     </div>
     <div id="content">
-    <% if(output[0].equals("Titolo non esistente")){
-    	
-    	out.println("<h2 style='font-size:2em;color:red;text-align:center; margin-left:0%'>Il codice inserito non corrisponde ad alcun titolo di viaggio.</h2>");
-    	out.println("<h2 style='font-size:5em;text-align:center; margin-left:0%'>&#128549;</h2><br>");
+    <% if(output[0].equals("Titolo non esistente")){ 	
+    	out.println("<h2 style='font-size:2em;color:red;text-align:center; margin-left:0%;margin-top:100px'>Il codice inserito non corrisponde ad alcun titolo di viaggio!</h2>");
+    	out.println("<h2 style='font-size:5em;text-align:center;margin-left:0%'></h2><br>");
     	}
     
     else if(output[0].equals("Titolo scaduto")){
-    	
-    	out.println("<h2 style='font-size:3em;'>Il titolo di viaggio è scaduto.&#128549;</h2>");
+    	out.println("<h2 style='font-size:3em;'>Il titolo di viaggio è scaduto!</h2>");
     	out.println("<h2 style='font-size:2em;color:white;text-align:left'>Tipo: <em>"+output[1]+"</em></h2>");
     	out.println("<h2 style='font-size:2em;color:white; text-align:left'>Data di scadenza: <em>"+output[2].split(" ")[0]+"</em></h2>");
     	out.println("<h2 style='font-size:2em;color:white; text-align:left'>Orario di scadenza: <em>"+output[2].split(" ")[1]+":00</em></h2><br>");	
     	
     }
     
-	else if(output[0].equals("Titolo attivato")){
-    	
-    	out.println("<h2 style='font-size:3em;color:green'>Il titolo di viaggio è stato attivato.&#128526;</h2>");
+	else if(output[0].equals("Titolo attivato")){ 	
+    	out.println("<h2 style='font-size:3em;color:green'>Il titolo di viaggio è stato attivato!</h2>");
     	out.println("<h2 style='font-size:2em;color:white;text-align:left'>Tipo: <em>"+output[1]+"</em></h2>");
     	out.println("<h2 style='font-size:2em;color:white; text-align:left'>Data di scadenza: <em>"+output[2].split(" ")[0]+"</em></h2>");
     	out.println("<h2 style='font-size:2em;color:white; text-align:left'>Orario di scadenza: <em>"+output[2].split(" ")[1]+":00</em></h2><br>");	
-    	
     }
     
 	else if(output[0].equals("Titolo valido")){
-    	
-    	out.println("<h2 style='font-size:3em;color:green'>Il titolo di viaggio è valido.&#128526;</h2>");
+    	out.println("<h2 style='font-size:3em;color:green'>Il titolo di viaggio è valido!</h2>");
     	out.println("<h2 style='font-size:2em;color:white; text-align:left'>Tipo: <em>"+output[1]+"</em></h2>");
     	out.println("<h2 style='font-size:2em;color:white; text-align:left'>Data di scadenza: <em>"+output[2].split(" ")[0]+"</em></h2>");
     	out.println("<h2 style='font-size:2em;color:white; text-align:left'>Orario di scadenza: <em>"+output[2].split(" ")[1]+":00</em></h2><br>");	
@@ -103,17 +98,12 @@
     }
     
 else if(output[0].equals("Titolo attivato 2")){
-    	
-    	out.println("<h2 style='font-size:3em;color:green'>Il titolo di viaggio è stato attivato.&#128526;</h2>");
+    	out.println("<h2 style='font-size:3em;color:green'>Il titolo di viaggio è stato attivato!</h2>");
     	out.println("<h2 style='font-size:2em;color:white;text-align:left'>Tipo: <em>"+output[1]+"</em></h2>");
     	out.println("<h2 style='font-size:2em;color:white;text-align:left'>Data di scadenza: <em>"+output[2].split(" ")[0]+"</em></h2>");
     	out.println("<h2 style='font-size:2em;color:white;text-align:left'>Orario di scadenza: <em>"+output[2].split(" ")[1]+":00</em></h2><br>");
-    	out.println("<h2 style='font-size:1.2em;color:green;text-align:center;margin-left:0%;width:100%'>Il biglietto può essere attivato ancora "+output[3]+" volte dopo la scadenza dell'attivazione corrente.</h2><br>");
-    	
-    }
-    
-    
-    
+    	out.println("<h2 style='font-size:1.5em;color:green;text-align:left'>Il biglietto può essere attivato ancora "+output[3]+" volte dopo la scadenza dell'attivazione corrente.</h2><br>");
+    } 
     %>
     </div>
 

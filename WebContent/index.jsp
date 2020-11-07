@@ -50,15 +50,15 @@
 		left:0;
 		right:0;
 		top:0;
-		height:70px;
+		height:60px;
 		text-align:center;
 		background-color:black;
 		color:white;
 	}
 	h1{
-		position:relative;
-		margin-top:25px;
-		font-size:3.3rem;
+		position:absolute;
+		margin-top:15px;
+		font-size:3.0rem;
 		float:left;
 		font-style:bold;
 		margin-left:15px;
@@ -66,13 +66,13 @@
 	}
 	a{
 		position:relative;
-		margin-top:35px;
-		font-size:1.9rem;
+		margin-top:23px;
+		font-size:2.0rem;
 		float:right;
 		font-style:italic;
 		text-align:center;
-		padding-left:15px;
-		border-left:1px solid red;
+		padding-left:10px;
+		border-left:2px solid red;
 		text-decoration:none;
 		margin-right:15px;
 		color:white;
@@ -88,11 +88,11 @@
 		left:0;
 		right:0;
 		top:0;
-		margin-top:70px;
+		margin-top:60px;
 		background-color:black;
 		background-image:url('static/pict4.jpg');
-		background-size:100% 310px;
-		height:310px;
+		background-size:100% 315px;
+		height:315px;
 		color:white;
 	}
 	#menu{
@@ -102,7 +102,7 @@
 		left:0;
 		right:0;
 		top:0;
-		margin-top:380px;
+		margin-top:375px;
 		display:flex;
   		flex-direction:row;
 		background-color:black;
@@ -124,10 +124,10 @@
 		left:0;
 		right:0;
 		top:0;
-		margin-top:440px;
+		margin-top:435px;
 		background-image:url('static/cart.jpg');
-		background-size:100% 310px;
-		height:310px;
+		background-size:100% 315px;
+		height:315px;
 		z-index:1;
 	}
 	.panel{
@@ -137,7 +137,7 @@
 		left:0;
 		right:0;
 		top:0;
-      	margin-top:440px;
+      	margin-top:435px;
       	height:200px;
       	background-color:black;
       	color:white;
@@ -161,20 +161,24 @@
 		right:0;
 		top:0;
      	background-color:black;
-		margin-top:58px;
-      	height:300px;
-      	margin-left:1181px;
+		margin-top:60px;
+      	height:315px;
+      	margin-left:1184.5px;
       	opacity:0.85;
       	z-index:2;
       	display:none;
       }
       .log{
+      	margin-top:6px;
       	margin-left:auto;
 		margin-right:auto;
       	width:250px;
-      	 
       }
       .sub{
+      	margin-top:12px;
+      	display:block;
+      	margin-left:auto;
+		margin-right:auto;
       	width:50px;
       }
       #msg{
@@ -186,9 +190,8 @@
 		top:0;
       	color:white;
       	text-align:center;
-      	width:100%;
       	margin-top:250px;
-      	font-size:10px;
+      	font-size:40px;
 		font-family:sans-serif;
 		font-style:italic;
       }
@@ -274,7 +277,7 @@ var pictures=["url('static/pict4.jpg')","url('static/pict5.jpg')","url('static/p
     function onl(id){
       if(var1==0){
         var1=1;
-        document.getElementById(id).style.color='blue';
+        document.getElementById(id).style.color='red';
 
       }
       else{
@@ -330,7 +333,7 @@ var pictures=["url('static/pict4.jpg')","url('static/pict5.jpg')","url('static/p
     }
     
     setInterval(function(){calcul( document.getElementById('duration').value)},500);
-
+blue
 
   </script>
 </head>

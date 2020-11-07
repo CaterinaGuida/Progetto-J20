@@ -6,11 +6,11 @@
 <title>VERIFICA</title>
 <style type="text/css">
 	  html{
-		font-size:10px;
+		font-size:15px;
 		font-family:sans-serif;
 		}
   	  #head{
-       position:absolute;
+       	position:absolute;
 		margin-left:auto;
 		margin-right:auto;
 		left:0;
@@ -20,6 +20,7 @@
         background-color:black;
       }
       h1{
+      	margin-top:50px;
         color:white;
         text-align:center;
         font-family:sans-serif;
@@ -86,11 +87,12 @@
 		left:0;
 		right:0;
 		top:0;
-	    margin-top:200px; 
+	    margin-top:210px; 
 	    width:10%;
 	    height:50px;
+	    font-size:1.3em;
      }
-
+/*
    @media only screen and (max-width: 600px) {
      #content{
        	height:100%;
@@ -113,7 +115,7 @@
      	margin-left:38%;
      }
      }
-
+*/
   </style>    
 </head>
 <%

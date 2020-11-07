@@ -23,11 +23,12 @@
 		top:0;
         margin-top:150px;
         background-color:black;
-        height: 530px;
+        height:530px;
         opacity:0.8;
         padding-top:5%;
       }
       h1{
+      	margin-top:50px;
         color:white;
         text-align:center;
         font-family:sans-serif;
@@ -82,14 +83,14 @@
 		right:0;
 		top:0;
 		width:10%;
-	    margin-top:200px;
+	    margin-top:210px;
 	    height:50px;
       }
       #attiva{
       	width:100%;
 	    height:50px;
       }
-      
+/*      
    @media only screen and (min-height: 800px) {
      #content{
      	padding-top:300px;
@@ -118,6 +119,7 @@
 	    font-size:1em;
       }     
      }
+ */
     </style>
 
   </head>

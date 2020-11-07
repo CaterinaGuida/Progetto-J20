@@ -6,7 +6,7 @@
 <title>PAGAMENTO</title>
 <style type="text/css">
 	html{
-		font-size:10px;
+		font-size:15px;
 		font-family:sans-serif;
 	}
   #head{
@@ -20,6 +20,7 @@
         background-color:black;
       }
       h1{
+      	margin-top:50px;
         color:white;
         text-align:center;
         font-family:sans-serif;
@@ -43,9 +44,9 @@
       	display:flex;
   		flex-direction:row;
       	color:white;
-      	font-size:2rem;
-      	margin-top:1px;
-      	padding-left:8%;
+      	font-size:1.5rem;
+      	margin-top:0px;
+      	padding-left:9.5%;
       }
       .column{
       	width:25%;
@@ -58,30 +59,40 @@
       select{
       	font-size:2rem;
       	width:40px;
-      }
-      
+      	height:35px;
+     }
      #to{
-     	position: absolute; 
+     	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
      	font-size:2rem;
      	width:30%; 
-     	margin-top:60px; 
-     	margin-left:35%;
+     	margin-top:420px;
      	color:white;
      }
      #tot{
-     	font-size:2rem;
+		margin-left:auto;
+		margin-right:auto;
+     	font-size:1.1rem;
      	text-align:center;
      }
-     em{
+      em{
      	color:white;
-     	display: inline;
+     	display:inline;
      }
      #but{
-	     position:absolute;
-	     margin-top:130px;
-	     margin-left:45%; 
-	     width:10%;
-	     height:50px; 
+	    position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+	    margin-top:480px;
+	    width:10%;
+	    height:50px; 
      }
      #s{
       	position:absolute;
@@ -102,7 +113,7 @@
       	font-size: 4rem;
       	color:purple;
       }
-      
+ /*     
       @media only screen and (max-width: 600px) {
       .row {
         font-size:1.5rem;
@@ -138,7 +149,7 @@
      	height:100%;
      }
       }
-      
+  */    
 </style>
  <% 	
  
@@ -210,10 +221,10 @@
 </head>
 <body>
   <div id="head">
-      <h1>PAGAMENTO</h1>
+      <h1>Pagamento</h1>
    </div>
    <div id="content">
-   <h2 id="text" style="color:white;font-size:2rem; text-align:center; padding-bottom:20px">Importo da pagare: <%=price %>&euro;</h2>
+   <h2 id="text" style="color:white;font-size:2rem;margin-top:0px; text-align:center; padding-bottom:5px">Importo: <%=price %>&euro;</h2>
    <div class="row">
    		<div class="column">0.05&euro; <select name="cars" id="car1" onclick="toti()" onmouseover="toti()">
                 <option value=0>0</option>
@@ -329,12 +340,12 @@
    </div>
    <br>
    <br>
-   <div id="to"><em >Importo inserito:<input id="tot"  type="text" name="" value="0" readonly="readonly"> &euro; </em></div>
+   <div id="to"><em >Importo inserito: <input id="tot"  type="text" name="" value="0" readonly="readonly"> &euro; </em></div>
    <input  id="but" type="button" name="" value="paga" onclick="validation()">
    </div>
    <div id="s">
 		<h1>Il pagamento è avvenuto con successo!</h1>
-		<h1 id="resto">RESTO: </h2><br>
+		<h1 id="resto">RESTO:</h2><br>
 		<h2 style="text-align:center;  font-size:2.5rem"><a href="<%=nextpage%>">Clicca qui per SCARICARE il titolo di viaggio!</a><h2>
     </div>
 </body>
