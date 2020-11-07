@@ -6,24 +6,32 @@
     <style media="screen">
       #head{
         position:absolute;
-        width:1520px;
-        height:120px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        height:150px;
         background-color:black;
       }
       #content{
         position:absolute;
-        margin-top:122px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        margin-top:150px;
         background-color:black;
-        width: 1520px;
-        height: 515px;
+        height: 530px;
         opacity:0.8;
-        padding-top: 100px;
+        padding-top:5%;
       }
       h1{
         color:white;
-        text-align: center;
-        font-family: sans-serif;
-        font-style: italic;
+        text-align:center;
+        font-family:sans-serif;
+        font-style:bold;
         font-size:3em;
       }
       em{
@@ -36,36 +44,45 @@
       	position:absolute;
         margin-top:9.5%;
         background-color:black;
-        width: 100%;
-        height: 80%;
+        width:100%;
+        height:80%;
         opacity:0.8;
         padding-left:20px;
         display:none;
-        color:white;
+        color:while;
       }
       a{
       	font-size:1.5em;
       	text-decoration:underline;
-      	color: lightblue;
+      	color:red;
       }
       a:hover{
       	font-size:1.8em;
-      	color: purple;
+      	color:purple;
       }
       #codice{
-      	margin:auto;
+      	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
       	width:80%;
-      	margin-left:10%;
-      	height: 45px;
-      	text-align: center;
-      	font-size: 1.5em;
-      	border-radius: 15px;
+      	margin-top:100px;
+      	height:45px;
+      	text-align:center;
+      	font-size:1.5em;
+      	border-radius:15px;
       }
       #att{
-      	position: absolute;
-      	margin-left: 45%;
-	    margin-top: 100px; 
-	    width:10%;
+      	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+		width:10%;
+	    margin-top:200px;
 	    height:50px;
       }
       #attiva{
@@ -73,8 +90,7 @@
 	    height:50px;
       }
       
-      @media only screen and (min-height: 800px) {
-
+   @media only screen and (min-height: 800px) {
      #content{
      	padding-top:300px;
        	height:90%;
@@ -99,7 +115,7 @@
       #attiva{
       	width:100%;
 	    height:70px;
-	    font-size: 1em;
+	    font-size:1em;
       }     
      }
     </style>

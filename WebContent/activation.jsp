@@ -6,55 +6,57 @@
     <style media="screen">
       #head{
         position:absolute;
-        width:100%;
-        height:120px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        height:150px;
         background-color:black;
       }
       #content{
         position:absolute;
-        margin-top:123px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        margin-top:150px;
         background-color:black;
-        width: 100%;
-        height: 500px;
+        height:530px;
         opacity:0.8;
-        padding-top: 5%;
+        padding-top:5%;
       }
       h1{
         color:white;
-        text-align: center;
-        font-family: sans-serif;
-        font-style: italic;
+        text-align:center;
+        font-family:sans-serif;
+        font-style:bold;
         font-size:3em;
-
       }
       h2{
         color:red;
         margin-left:28%;
-        font-family: sans-serif;
+        font-family:sans-serif;
         font-size:2em;
-	
       }
-
       em{
         color:white;
         text-align:right;
         margin-left:10%;
         font-size:1em;
-      }
-     
-      
+      }  
 
-     @media only screen and (min-height: 800px) {
-
+   @media only screen and (min-height: 800px) {
      #content{
      	padding-top:150px;
        	height:90%;
-
      }
      h2{
      	margin-left:25%;
      }
      }
+
     </style>
   </head>
   <% 

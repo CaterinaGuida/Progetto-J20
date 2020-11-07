@@ -2,35 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>validation</title>
+    <title>CONVALIDA</title>
     <style media="screen">
     	html{
 		font-size:20px;
 		font-family: sans-serif;
 		}
-    
       #head{
-        position:absolute;
-        width:100%;
-        height:120px;
+         position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        height:150px;
         background-color:black;
       }
       #content{
-        position:absolute;
-        margin-top:123px;
+         position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        margin-top:150px;
         background-color:black;
-        width: 100%;
-        height: 550px;
+        height:530px;
         opacity:0.8;
-        padding-top: 20px;
+        padding-top:5%;
       }
       h1{
         color:white;
-        text-align: center;
-        font-family: sans-serif;
-        font-style: italic;
+        text-align:center;
+        font-family:sans-serif;
+        font-style:bold;
         font-size:3rem;
-
       }
       h2{
         color:red;
@@ -38,7 +44,6 @@
         font-family: sans-serif;
         font-size:3rem;
         margin-left:30%
-
       }
 
       em{
@@ -71,7 +76,7 @@
 
   <body  onload="initialize()">
     <div id="head">
-      <h1>controllo</h1>
+      <h1>VERIFICA</h1>
     </div>
     <div id="content">
     <% if(output[0].equals("Titolo non esistente")){

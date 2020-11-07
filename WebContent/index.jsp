@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>index</title>
+<title>INDEX</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -41,87 +41,111 @@
 <style type="text/css">
 	html{
 		font-size:10px;
-		font-family: sans-serif;
+		font-family:sans-serif;
 	}
 	#navbar{
 		position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+		height:70px;
+		text-align:center;
 		background-color:black;
-		width:100%;
-		height:55px;
-		color:white;	
+		color:white;
 	}
 	h1{
-		font-size:2.5rem;
-		float: left;
-		font-style: italic;
+		position:relative;
+		margin-top:25px;
+		font-size:3.3rem;
+		float:left;
+		font-style:bold;
 		margin-left:15px;
+		color:white;
 	}
 	a{
+		position:relative;
+		margin-top:35px;
+		font-size:1.9rem;
 		float:right;
-		font-size:1.7rem;
-		margin-top:22.5px;
-		margin-right:15px;
+		font-style:italic;
 		text-align:center;
-		padding-left:10px;
-		border-left: 1px solid white;
-		text-decoration: none;
-		color: white;
+		padding-left:15px;
+		border-left:1px solid red;
+		text-decoration:none;
+		margin-right:15px;
+		color:white;
 	}
 	a:hover{
-		text-decoration: underline;
-		color: blue;
+		text-decoration:underline;
+		color:red;
 	}
 	#carousel{
 		position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+		margin-top:70px;
 		background-color:black;
 		background-image:url('static/pict4.jpg');
-		background-size: 100% 300px;
-		margin-top:58px;
-		margin-left:5px;
-		margin-right:5px;
-		width:100%;
-		height:300px;
+		background-size:100% 310px;
+		height:310px;
 		color:white;
 	}
 	#menu{
 		position:absolute;
-		display: flex;
-  		flex-direction: row;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+		margin-top:380px;
+		display:flex;
+  		flex-direction:row;
 		background-color:black;
-		margin-top:361.5px;
-		width:100%;
-		height:58px;
+		height:60px;
 		color:white;
 		z-index:3;
 	}
 	button{
 		width:33.3%;
-		margin: 5px;
-		color: black;
+		margin:5px;
+		color:black;
 		background-color:lightgrey;
-		font-size:1.5rem;
+		font-size:2rem;
 	}
 	#footer{
 		position:absolute;
-		background-image: url('static/cart.jpg');
-		background-size: 100% 300px;
-		margin-top:423px;
-		width:100%;
-		height:300px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+		margin-top:440px;
+		background-image:url('static/cart.jpg');
+		background-size:100% 310px;
+		height:310px;
 		z-index:1;
 	}
 	.panel{
-      position: absolute;
-      margin-top: 418px;
-      width:100%;
-      height:200px;
-      background-color: black;
-      color: white;
-      /*display: none;*/
-      opacity:0.85;
-      text-align: center;
-      z-index:2;
-      padding-top:40px;
+     	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+      	margin-top:440px;
+      	height:200px;
+      	background-color:black;
+      	color:white;
+      	/*display: none;*/
+      	opacity:0.85;
+      	text-align:center;
+      	z-index:2;
+      	padding-top:40px;
     }
     input{
         text-align:center;
@@ -130,31 +154,45 @@
      	padding:3px;
      }
       #login{
-      position: absolute;
-      background-color: black;
-      padding-top:10px;
-      width:20%;
-      height:290px;
-      margin-top:58.7px;
-      margin-left:80%;
-      opacity:0.8;
-      z-index:2;
-      display:none;
+      	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+     	background-color:black;
+		margin-top:58px;
+      	height:300px;
+      	margin-left:1181px;
+      	opacity:0.85;
+      	z-index:2;
+      	display:none;
       }
       .log{
-      	 width:267px; 
-      	 margin-left:5px; 
+      	margin-left:auto;
+		margin-right:auto;
+      	width:250px;
+      	 
       }
       .sub{
-      	margin-left:118.5px;
+      	width:50px;
       }
       #msg{
-      	color:white; 
-      	text-align:center; 
-      	width:100%; 
-      	margin-top:250px; 
-      	font-size:3.95rem;
+      	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+      	color:white;
+      	text-align:center;
+      	width:100%;
+      	margin-top:250px;
+      	font-size:10px;
+		font-family:sans-serif;
+		font-style:italic;
       }
+/*
 	@media only screen and (max-width: 800px) {
       #login {
         width:100%;
@@ -162,42 +200,46 @@
         padding-top:10px;
       }  
       .log,.sub{
-      	  width:85%;
-      	  margin-left:9.5%;      
+      	width:85%;
+        margin-left:9.5%;      
       }}
-      @media only screen and (max-width: 400px){
+      
+    @media only screen and (max-width: 400px){
       #msg {
-      	 font-size:2.5rem;
-      	 text-align:left;
-      	 margin-top:235px;  
+      	font-size:2.5rem;
+      	text-align:left;
+      	margin-top:235px;  
       }}
-      @media only screen and (max-width: 400px){
+      
+    @media only screen and (max-width: 400px){
       button{
 		width:31%;
 		margin: 5px;
 		color: black;
 		background-color:lightgrey;
 	}}
+	
 	@media only screen and (min-width: 400px){
       #footer{
-		height: 400px;
-		background-size: 100% 400px ;
-	}
-	#msg{
+		height:300px;
+		background-size:100% 300px;
+	  }
+	  #msg{
       	font-size:3.5rem;
       }
 	}
+
 	@media only screen and (min-height: 800px){
       #footer{
-		height: 400px;
-		width: 100%;
-		background-size: 100% 400px ;
+		height:300px;
+		width:100%;
+		background-size:100% 300px ;
 	}
 	#msg{
       	font-size:4.5rem;
       }
 	}
-      
+      */
 </style>
 <script type="text/javascript">
 var pictures=["url('static/pict4.jpg')","url('static/pict5.jpg')","url('static/pict3.jpg')"];

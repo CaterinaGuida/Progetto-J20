@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>errore</title>
+<title>ERRORE</title>
 </head>
 <body><h1 style="text-align:center"> Errore: controllore non registrato! </h1>
 

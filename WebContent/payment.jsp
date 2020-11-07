@@ -3,50 +3,57 @@
 <head>
 <meta charset="ISO-8859-1">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Pagamento</title>
+<title>PAGAMENTO</title>
 <style type="text/css">
 	html{
 		font-size:10px;
-		font-family: sans-serif;
+		font-family:sans-serif;
 	}
   #head{
         position:absolute;
-        width:100%;
-        height:100px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        height:150px;
         background-color:black;
       }
       h1{
         color:white;
-        text-align: center;
-        font-family: sans-serif;
-        font-style: italic;
-        font-size:3.5rem;
+        text-align:center;
+        font-family:sans-serif;
+        font-style:bold;
+        font-size:3em;
       }
       #content{
         position:absolute;
-        margin-top:103px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        margin-top:150px;
         background-color:black;
-        width: 100%;
-        height: 100%;
+        height:530px;
         opacity:0.8;
-        padding-top:15px;
-
-
+        padding-top:5%;
       }
       .row{
-      	display: flex;
-  		flex-direction: row;
+      	display:flex;
+  		flex-direction:row;
       	color:white;
       	font-size:2rem;
+      	margin-top:1px;
       	padding-left:8%;
       }
       .column{
       	width:25%;
       	padding-left:5%;
       	padding-right:5%;
-      	padding-bottom:12px;
-      	display: flex;
-  		flex-direction: column;
+      	padding-bottom:5px;
+      	display:flex;
+  		flex-direction:column;
       }
       select{
       	font-size:2rem;
@@ -59,11 +66,9 @@
      	width:30%; 
      	margin-top:60px; 
      	margin-left:35%;
-     	color:white; 
-     
+     	color:white;
      }
      #tot{
-
      	font-size:2rem;
      	text-align:center;
      }
@@ -72,22 +77,24 @@
      	display: inline;
      }
      #but{
-	     position: absolute;
-	     margin-top: 130px;
+	     position:absolute;
+	     margin-top:130px;
 	     margin-left:45%; 
 	     width:10%;
-	     height:50px;
-	     
+	     height:50px; 
      }
      #s{
-     
-     	position:absolute;
-        margin-top:103px;
+      	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        margin-top:150px;
         background-color:black;
-        width: 100%;
-        height: 550px;
+        height:530px;
         opacity:0.8;
-        padding-top:20px;
+        padding-top:5%;
         display:none;
         color:white;
       }

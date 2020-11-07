@@ -3,75 +3,95 @@
 <head>
 <meta charset="ISO-8859-1">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>attivazione</title>
+<title>VERIFICA</title>
 <style type="text/css">
 	  html{
 		font-size:10px;
-		font-family: sans-serif;
+		font-family:sans-serif;
 		}
   	  #head{
-        position:absolute;
-        width:100%;
+       position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
         height:150px;
         background-color:black;
       }
       h1{
         color:white;
-        text-align: center;
-        font-family: sans-serif;
-        font-style: italic;
-        font-size:3.5rem;
+        text-align:center;
+        font-family:sans-serif;
+        font-style:bold;
+        font-size:3em;
       }
       #content{
         position:absolute;
-        margin-top:153px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        margin-top:150px;
         background-color:black;
-        width: 100%;
-        height: 100%;
+        height:530px;
         opacity:0.8;
-
+        padding-top:5%;
 	 }
 	 #nome{
 	 	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
         margin-top:115px;
         text-align:center;
-        width:100%;
 	 }
 	 #profile{ 
 	 	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
         margin-top:20px;
-        background-color: white;
-        margin-left:45%;
+        background-color:white;
         border-radius:100%;
-        width: 10%;
-        height: 85px;
-        background-image: url('static/avatar.png');
-        background-size: 100% 85px;
- 
+        width:8%;
+        height:85px;
+        background-image:url('static/avatar.png');
+        background-size:100% 85px;
 	 }
-	 
 	 #codice{
       	position:absolute;
-      	margin-top:120px;
-      	width:60%;
-      	margin-left:20%;
-      	height: 35px;
-      	border-radius: 35px;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+      	margin-top:100px;
+      	width:80%;
+      	height:45px;
+      	border-radius:15px;
       	text-align:center;
-      	color: black;
-      	font-size:2rem;
+      	color:black;
+      	font-size:1.5em;
       }
       #but{
-	     position: absolute;
-	     margin-top: 220px; 
-	     width:10%;
-	     height:50px;
-	     margin-left:45%;
-	     
+	    position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+	    margin-top:200px; 
+	    width:10%;
+	    height:50px;
      }
 
-     @media only screen and (max-width: 600px) {
-
+   @media only screen and (max-width: 600px) {
      #content{
        	height:100%;
      }
@@ -93,6 +113,7 @@
      	margin-left:38%;
      }
      }
+
   </style>    
 </head>
 <%
