@@ -24,13 +24,13 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 
 9) Eseguire lo script per aggiungere il nuovo controllore al database
 
-## Esecuzione dell'applicazione
+## Avvio del server
 
 1) Scaricare ed installare **Eclipse IDE for Enterprise Java Developers**: https://www.eclipse.org/downloads/packages/
 
 2) Scaricare ed installare **Apache Tomcat 8.5**: https://tomcat.apache.org/download-80.cgi
 
-3) Aprire Eclipse e avviare il server
+3) Aprire Eclipse
 
    3.1) Cliccare (*Window* -> *Preferences* -> *Server* -> *Runtime Environments* -> *Add*)
 
@@ -50,14 +50,26 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 
    3.9) Impostare il campo *Tomcat admin port* con 9090 e salvare
 
-4) Importare il progetto in Eclipse: cliccare (*File* -> *Open Projects from File System*)
+## Esecuzione dell'applicazione
 
-5) Cliccare *Directory...*, selezionare la cartella contenente il progetto, cliccare *Selezione cartella* e infine *Finish*
+1) Importare il progetto in Eclipse: cliccare (*File* -> *Open Projects from File System*)
 
-6) **Modificare le credenziali di accesso al database nella classe *DaoFactory***, sostituendo a *root* e a *Mateodima7* le proprie
+2) Cliccare *Directory...*, selezionare la cartella contenente il progetto, cliccare *Selezione cartella* e infine *Finish*
 
-6) **Modificare il percorso del file *logo.png* nella classe *Receipt* (il file *logo.png* si trova in "Progetto-J20\WebContent\static")**
+3) **Modificare le credenziali di accesso al database nella classe *DaoFactory***, sostituendo a *root* e a *Mateodima7* le proprie
 
-7) A questo punto, cliccare con il tasto destro su *index.jsp*, spostarsi su *Run As* e cliccare su *Run on Server*
+4) **Modificare il percorso del file *logo.png* nella classe *Receipt* (il file *logo.png* si trova in "Progetto-J20\WebContent\static")**
 
-8) Copiare il link su un browser
+5) A questo punto, cliccare con il tasto destro su *index.jsp*, spostarsi su *Run As* e cliccare su *Run on Server*
+
+6) Copiare il link su un browser
+
+# LIBRERIE UTILIZZATE
+
+1) ITEXTPDF v. 5.5.9
+
+2) JUNIT 5
+
+3) MYSQL-CONNECTOR-JAVA v. 8.0.21
+
+4) SERVLET-API
