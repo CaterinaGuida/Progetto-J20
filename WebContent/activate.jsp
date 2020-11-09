@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>ATTIVAZIONE</title>
+    <title>URBAN PAVIA - Attiva il tuo titolo di viaggio</title>
     <style media="screen">
       #head{
         position:absolute;
@@ -11,8 +11,9 @@
 		left:0;
 		right:0;
 		top:0;
+		width:100%;
+		background-color:black;
         height:150px;
-        background-color:black;
       }
       #content{
         position:absolute;
@@ -23,35 +24,36 @@
 		top:0;
         margin-top:150px;
         background-color:black;
-        height:530px;
         opacity:0.8;
-        padding-top:5%;
+        height:100%;
       }
       h1{
-      	margin-top:50px;
-        color:white;
-        text-align:center;
-        font-family:sans-serif;
+      	margin-top:34px;
+      	text-align:center;
+      	font-family:sans-serif;
         font-style:bold;
         font-size:3em;
+        color:white;
       }
-      em{
+/*      em{
         color:white;
         text-align:center;
         margin-left:40%;
         font-size:1.4em;
-      }
+      } 
       #s{
-      	position:absolute;
-        margin-top:9.5%;
+       	position:absolute;
+		margin-left:auto;
+		margin-right:auto;
+		left:0;
+		right:0;
+		top:0;
+        margin-top:150px;
         background-color:black;
-        width:100%;
-        height:80%;
         opacity:0.8;
-        padding-left:20px;
+        height:100%;
         display:none;
-        color:while;
-      }
+      } 
       a{
       	font-size:1.5em;
       	text-decoration:underline;
@@ -60,16 +62,16 @@
       a:hover{
       	font-size:1.8em;
       	color:purple;
-      }
+      } */
       #codice{
-      	position:absolute;
+       	position:absolute;
 		margin-left:auto;
 		margin-right:auto;
 		left:0;
 		right:0;
 		top:0;
       	width:80%;
-      	margin-top:100px;
+      	margin-top:150px;
       	height:45px;
       	text-align:center;
       	font-size:1.5em;
@@ -83,50 +85,57 @@
 		right:0;
 		top:0;
 		width:10%;
-	    margin-top:210px;
+	    margin-top:240px;
 	    height:50px;
       }
       #attiva{
       	width:100%;
 	    height:50px;
       }
-/*      
-   @media only screen and (min-height: 800px) {
-     #content{
-     	padding-top:300px;
-       	height:90%;
-       	font-size: 2em;
-     }
+      
+      @media only screen and (max-width: 800px){
+      h1{
+        font-size:2.5em;
+      }
+      #content{
+       	height:400px;
+      }
       #att{
-      	position: absolute;
-      	margin-left: 40%;
-	    margin-top: 100px; 
 	    width:20%;
-	    height:70px;
+	    margin-top:240px;
       }
       #codice{
       	width:80%;
-      	margin-left:10%;
-      	height: 45px;
-      	text-align: center;
-      	font-size: 1.2em;
-      	height:100px;
-      	border-radius: 100px;
+      	font-size:1.2em;
+      	margin-top:160px;
       }
       #attiva{
       	width:100%;
-	    height:70px;
 	    font-size:1em;
       }     
-     }
- */
-    </style>
+      }
+      
+      @media only screen and (max-width: 600px){
+      #att{
+	    width:15%;
+	    margin-top:190px;
+      }
+      #codice{
+      	width:80%;
+      	font-size:0.9em;
+      	margin-top:120px;
+      }
+      #attiva{
+      	width:100%;
+	    height:40px;
+      }
+      }   
 
+    </style>
   </head>
-   
   <body  onload="initialize()">
     <div id="head">
-      <h1>Attivazione</h1>
+      <h1>ATTIVAZIONE</h1>
     </div>
     <div id="content">
     <form action="Attivazione" method="post">

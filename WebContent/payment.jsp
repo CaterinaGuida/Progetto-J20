@@ -3,170 +3,173 @@
 <head>
 <meta charset="ISO-8859-1">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>PAGAMENTO</title>
+<title>URBAN PAVIA - Pagamento in corso</title>
 <style type="text/css">
 	html{
-		font-size:15px;
+		font-size:20px;
 		font-family:sans-serif;
 	}
-  #head{
+    #head{
         position:absolute;
 		margin-left:auto;
 		margin-right:auto;
 		left:0;
 		right:0;
 		top:0;
+		width:100%;
+		background-color:black;
         height:150px;
-        background-color:black;
-      }
-      h1{
-      	margin-top:50px;
-        color:white;
-        text-align:center;
-        font-family:sans-serif;
+    }
+    h1{
+      	margin-top:34px;
+      	text-align:center;
+      	font-family:sans-serif;
         font-style:bold;
-        font-size:3em;
-      }
-      #content{
+        font-size:3rem;
+        color:white;  
+    }
+    #content{
         position:absolute;
 		margin-left:auto;
 		margin-right:auto;
 		left:0;
 		right:0;
 		top:0;
-        margin-top:150px;
+		margin-top:150px;
+		width:100%;    
         background-color:black;
-        height:530px;
         opacity:0.8;
-        padding-top:5%;
-      }
-      .row{
+        height:100%;
+    }
+    .row{
       	display:flex;
   		flex-direction:row;
       	color:white;
-      	font-size:1.5rem;
-      	margin-top:0px;
-      	padding-left:9.5%;
-      }
-      .column{
-      	width:25%;
-      	padding-left:5%;
-      	padding-right:5%;
-      	padding-bottom:5px;
+      	font-size:1.3rem;
+    }
+    .column{
       	display:flex;
   		flex-direction:column;
-      }
-      select{
-      	font-size:2rem;
-      	width:40px;
+      	width:100%;
+      	margin-left:10%;   
+    }
+    select{
+      	font-size:1rem;
+      	width:17%;
       	height:35px;
-     }
-     #to{
-     	position:absolute;
-		margin-left:auto;
-		margin-right:auto;
-		left:0;
-		right:0;
-		top:0;
-     	font-size:2rem;
-     	width:30%; 
-     	margin-top:420px;
-     	color:white;
-     }
-     #tot{
-		margin-left:auto;
-		margin-right:auto;
-     	font-size:1.1rem;
-     	text-align:center;
-     }
-      em{
-     	color:white;
-     	display:inline;
-     }
-     #but{
-	    position:absolute;
-		margin-left:auto;
-		margin-right:auto;
-		left:0;
-		right:0;
-		top:0;
-	    margin-top:480px;
-	    width:10%;
-	    height:50px; 
-     }
-     #s{
+    }
+    #to{
       	position:absolute;
-		margin-left:auto;
-		margin-right:auto;
-		left:0;
-		right:0;
-		top:0;
-        margin-top:150px;
+	  	margin-left:auto;
+	  	margin-right:auto;
+	  	left:0;
+	  	right:0;
+	  	top:0;
+	  	margin-top:410px;
+	  	margin-left:26%;
+      	font-size:2rem;
+    }
+    #tot{
+     	font-size:1.5rem;
+     	text-align:center;
+    }
+    em{
+     	color:green;
+     	display:inline;
+    }
+    #but{
+	    position:absolute;
+	 	margin-left:auto;
+	 	margin-right:auto;
+	 	left:0;
+	 	right:0;
+	 	top:0;
+	    margin-top:500px;
+	    width:10%;
+	    height:45px; 
+    }
+    #s{
+       	position:absolute;
+	 	margin-left:auto;
+	 	margin-right:auto;
+	 	left:0;
+	 	right:0;
+	 	top:0;
+	 	margin-top:150px;
+	 	width:100%;    
         background-color:black;
-        height:530px;
         opacity:0.8;
-        padding-top:5%;
+        height:100%;
         display:none;
-        color:white;
-      }
-      a:hover{
-      	font-size: 4rem;
+    }
+    a:hover{
+      	font-size:3rem;
       	color:purple;
-      }
- /*     
-      @media only screen and (max-width: 600px) {
-      .row {
-        font-size:1.5rem;
-        padding-left:35px;
-      }
-      select{
-      	font-size:1.5rem;
-      	width:30px;
-      }
-      #to{
-     	position: absolute; 
-     	font-size:2rem;
-     	width:100%; 
-     	margin-top:55px; 
-     	margin-left:15%; 
-     	display: flex;
-     	flex-direction:row;
-     
-     }
-      #content{
-      	height:100%;
-      }
-      #tot{
-		width:100px;
-		
-     }
-     #but{
-     	margin-left:38%;
-     	width:24%;
-     }
-     #s{
-     	
-     	height:100%;
-     }
-      }
-  */    
+    }
+      
+    @media only screen and (max-width: 1200px){
+    #but{
+     	margin-top:470px;
+     	width:12%;
+    }
+    #content{
+        height:600px;
+    }
+    }
+      
+    @media only screen and (max-width: 1000px){
+    select{
+      	font-size:0.5rem;
+      	width:22%;
+    }
+    #but{
+     	margin-top:520px;
+     	width:20%;
+    }
+    #content{
+        height:600px;
+    }
+    }
+   
+    @media only screen and (max-width: 600px) {
+    html{
+		font-size:15px;
+	}
+	.row{
+      	font-size:1rem;
+    }
+    select{
+      	width:40%;
+    }
+    #to{
+        margin-top:300px;
+      	font-size:1rem;
+    }
+    #tot{
+		font-size:1rem;
+    }
+    #but{
+        margin-top:360px;
+     	width:20%;
+    }
+    #content{
+        height:600px;
+    }
+    }
+  
 </style>
  <% 	
- 
- 		String price= request.getParameter("price"); 
-    	String type= request.getParameter("type");
+ 		String price=request.getParameter("price"); 
+    	String type=request.getParameter("type");
     	String nextpage="";
-
     	
     	if(type.equals("single")){
     		nextpage="Bigliettosingolo";
- 
-
     	}
     	else if(type.equals("cumulative")){
     		nextpage="Bigliettocumulativo";
-    		int tripsNum= Integer.parseInt(request.getParameter("tripsNum"));
-    		double prez= Double.parseDouble(price);
+    		int tripsNum=Integer.parseInt(request.getParameter("tripsNum"));
+    		double prez=Double.parseDouble(price);
     		session.setAttribute("tripsNum",tripsNum);
     		session.setAttribute("price",prez);
     	}
@@ -175,15 +178,16 @@
     		String name=request.getParameter("name");
     		String surname=request.getParameter("surname");
     		String duration=request.getParameter("duration");
-    		double prez= Double.parseDouble(price);
-    		session.setAttribute("firstName", name);
-    		session.setAttribute("lastName", surname);
-    		session.setAttribute("duration", duration);
+    		double prez=Double.parseDouble(price);
+    		session.setAttribute("firstName",name);
+    		session.setAttribute("lastName",surname);
+    		session.setAttribute("duration",duration);
     		session.setAttribute("price",prez);
     	}
-    	
     %>
+    
 <script type="text/javascript">
+
       var total= 0.0;
       var importo=<%=price%>;
       var page='<%= nextpage%>';
@@ -193,7 +197,6 @@
           document.getElementById('car'+i).value=0;
       }
       document.getElementById('tot').value=0;
-
       }
 
       function toti(){
@@ -201,9 +204,7 @@
         for (let i = 1; i < 13; i++) {
             document.getElementById('tot').value=(parseFloat(document.getElementById('tot').value)+document.getElementById('car'+i).value*1.0).toFixed(2);
         }
-
       }
-
       setInterval(function(){toti()},500);
       
       function validation(){
@@ -221,10 +222,10 @@
 </head>
 <body>
   <div id="head">
-      <h1>Pagamento</h1>
+      <h1>PAGAMENTO</h1>
    </div>
    <div id="content">
-   <h2 id="text" style="color:white;font-size:2rem;margin-top:0px; text-align:center; padding-bottom:5px">Importo: <%=price %>&euro;</h2>
+   <h2 id="text" style="color:white;font-size:2rem;margin-top:20px;text-align:center;padding-bottom:5px">Importo: <%=price %>&euro;</h2>
    <div class="row">
    		<div class="column">0.05&euro; <select name="cars" id="car1" onclick="toti()" onmouseover="toti()">
                 <option value=0>0</option>
@@ -340,7 +341,7 @@
    </div>
    <br>
    <br>
-   <div id="to"><em >Importo inserito: <input id="tot"  type="text" name="" value="0" readonly="readonly"> &euro; </em></div>
+   <div id="to"><em >Importo inserito (&euro;): <input id="tot"  type="text" name="" value="0" readonly="readonly"></em></div>
    <input  id="but" type="button" name="" value="paga" onclick="validation()">
    </div>
    <div id="s">

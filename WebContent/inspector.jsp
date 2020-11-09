@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>VERIFICA</title>
+<title>URBAN PAVIA - Verifica validità</title>
 <style type="text/css">
 	  html{
 		font-size:15px;
@@ -16,16 +16,17 @@
 		left:0;
 		right:0;
 		top:0;
+		width:100%;
+		background-color:black;
         height:150px;
-        background-color:black;
       }
       h1{
-      	margin-top:50px;
-        color:white;
+      	margin-top:34px;
         text-align:center;
         font-family:sans-serif;
         font-style:bold;
         font-size:3em;
+        color:white;
       }
       #content{
         position:absolute;
@@ -36,9 +37,8 @@
 		top:0;
         margin-top:150px;
         background-color:black;
-        height:530px;
         opacity:0.8;
-        padding-top:5%;
+        height:100%;
 	 }
 	 #nome{
 	 	position:absolute;
@@ -72,13 +72,12 @@
 		left:0;
 		right:0;
 		top:0;
-      	margin-top:100px;
       	width:80%;
+      	margin-top:150px;
       	height:45px;
-      	border-radius:15px;
       	text-align:center;
-      	color:black;
       	font-size:1.5em;
+      	border-radius:15px;
       }
       #but{
 	    position:absolute;
@@ -87,35 +86,42 @@
 		left:0;
 		right:0;
 		top:0;
-	    margin-top:210px; 
-	    width:10%;
+		width:10%;
+	    margin-top:240px;
 	    height:50px;
-	    font-size:1.3em;
      }
-/*
-   @media only screen and (max-width: 600px) {
-     #content{
-       	height:100%;
-     }
-	#profile{
-		width: 40%;
-        height: 85px;
-        margin-left:30%;
-        background-size: 100% 85px;
-	}
-	#codice{
-      	width:80%;
-      	margin-left:10%;
-      	height: 40px;
-      	border-radius: 40px;
-      	font-size:1.2rem;
+
+     @media only screen and (max-width: 800px){
+      h1{
+        font-size:2.5em;
       }
- 	#but{
-     	width:24%;
-     	margin-left:38%;
-     }
-     }
-*/
+      #content{
+       	height:400px;
+      }
+      #but{
+	    width:20%;
+	    margin-top:240px;
+	    font-size:1em;
+      }
+      #codice{
+      	width:80%;
+      	font-size:1.2em;
+      	margin-top:160px;
+      }
+      }
+      
+      @media only screen and (max-width: 600px){
+      #but{
+	    margin-top:190px;
+	    height:40px;
+      }
+      #codice{
+      	width:80%;
+      	font-size:0.9em;
+      	margin-top:120px;
+      }
+      }   
+
   </style>    
 </head>
 <%
