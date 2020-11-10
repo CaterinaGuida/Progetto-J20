@@ -8,18 +8,39 @@ import java.io.ByteArrayOutputStream;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 
+/**
+ * The Class Receipt.
+ */
 public class Receipt {
+    
+    /** The cat font. */
     private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 28, Font.BOLD);
+    
+    /** The red font. */
     private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL, BaseColor.RED);
+    
+    /** The sub font. */
     private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL);
+    
+    /** The small B. */
     private static Font smallB = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, BaseColor.BLUE);
     
+    /** The path. */
     private String path =  "C:\\Users\\matte\\eclipse-workspace\\Progetto-J20\\WebContent\\static\\logo.png";
     
+    /**
+     * Instantiates a new receipt.
+     */
     public Receipt() {
     	
     }
 
+	/**
+	 * Generate single ticket.
+	 *
+	 * @param travel the travel
+	 * @return the byte array output stream
+	 */
 	public ByteArrayOutputStream generateSingleTicket(SingleTicket travel) {
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
 		try {
@@ -62,6 +83,12 @@ public class Receipt {
 		return bout;
 	}
 
+	/**
+	 * Generate cumulative ticket.
+	 *
+	 * @param travel the travel
+	 * @return the byte array output stream
+	 */
 	public ByteArrayOutputStream generateCumulativeTicket(CumulativeTicket travel) {
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
 		try {
@@ -104,6 +131,12 @@ public class Receipt {
 		return bout;
 	}
 	
+	/**
+	 * Generate pass.
+	 *
+	 * @param travel the travel
+	 * @return the byte array output stream
+	 */
 	public ByteArrayOutputStream generatePass(Pass travel) {
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
 		try {
