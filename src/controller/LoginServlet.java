@@ -1,7 +1,3 @@
-/* servlet che gestisce la richiesta authenticazione di un controllore.
- * Essa aesegue il login  grazie al metodo login della classe DaoLoger 
- */
-
 package controller;
 
 import java.io.IOException;
@@ -13,8 +9,21 @@ import javax.servlet.http.HttpServletResponse;
 import dao.DaoFactory;
 import dao.DaoLogin;
 
+/**
+ * class that handles a inspector's request to authenticate within the system
+ * 
+ * @author matte
+ */
 public class LoginServlet extends HttpServlet{
 	
+	/**
+	 * method that receives the username and password entered by the inspector,
+	 * compares them with the values stored in the database
+	 * and then passes control to the right jsp page
+	 *
+	 * @param req the request
+	 * @param res2 the response
+	 */
 	public void service(HttpServletRequest req, HttpServletResponse res2) {
 		try {
 			PrintWriter out = res2.getWriter();
@@ -32,7 +41,6 @@ public class LoginServlet extends HttpServlet{
 				req.getRequestDispatcher("/inspectornotfound.jsp").forward(req, res2);
 			}
 		} catch (IOException | ServletException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}

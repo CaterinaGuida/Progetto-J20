@@ -1,7 +1,3 @@
-/* servlet che gestisce la richiesta di attivazione di un titolo di viaggio da parte di un utente.
- * Essa attiva grazie al metodo activation della classe DaoActiver il titolo il cui codice è stato specificato dall'utente.
- */
-
 package controller;
 
 import java.io.IOException;
@@ -13,8 +9,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import dao.*;
 
+/**
+ * class that handles a user's request to activate a travel document
+ * 
+ * @author matte
+ */
 public class ActivationServlet extends HttpServlet {
 	
+	/**
+	 * method that receives the code entered by the user
+	 * and then passes control to the page activation.jsp
+	 *
+	 * @param req the request
+	 * @param res2 the response
+	 */
 	public void service(HttpServletRequest req, HttpServletResponse res2) {
 		PrintWriter out;
 		try {
@@ -24,7 +32,7 @@ public class ActivationServlet extends HttpServlet {
 			DaoActivation da = dao.getDaoActivation();
 			String output[] = da.activation(code);
 			req.getSession().setAttribute("output", output);
-			req.getRequestDispatcher("/activation.jsp").forward(req, res2);			
+			req.getRequestDispatcher("/activation.jsp").forward(req, res2);
 		} catch (IOException | ParseException | ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
