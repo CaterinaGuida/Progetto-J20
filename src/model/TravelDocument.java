@@ -4,7 +4,9 @@ import java.util.Date;
 import java.util.Random;
 
 /**
- * class that manages travel documents
+ * Class that manages travel documents.
+ * 
+ * @author matte
  */
 public abstract class TravelDocument {
 	
@@ -14,7 +16,7 @@ public abstract class TravelDocument {
 	protected double price;
 
 	/**
-	 * Instantiates a new travel document
+	 * Instantiates a new travel document.
 	 */
 	public TravelDocument() {
 		this.ticketCode = this.codeGenerate();
@@ -23,7 +25,7 @@ public abstract class TravelDocument {
 	}
 
 	/**
-	 * Gets the purchase date
+	 * Gets the purchase date.
 	 *
 	 * @return the purchase date
 	 */
@@ -32,7 +34,7 @@ public abstract class TravelDocument {
 	}
 
 	/**
-	 * Gets the expiration date
+	 * Gets the expiration date.
 	 *
 	 * @return the expiration date
 	 */
@@ -41,7 +43,7 @@ public abstract class TravelDocument {
 	}
 
 	/**
-	 * Gets the ticket code
+	 * Gets the ticket code.
 	 *
 	 * @return the ticket code
 	 */
@@ -50,7 +52,7 @@ public abstract class TravelDocument {
 	}
 
 	/**
-	 * Sets the ticket code
+	 * Sets the ticket code.
 	 *
 	 * @param ticketCode the new ticket code
 	 */
@@ -59,7 +61,7 @@ public abstract class TravelDocument {
 	}
 	
 	/**
-	 * Gets the price
+	 * Gets the price.
 	 *
 	 * @return the price
 	 */
@@ -68,7 +70,7 @@ public abstract class TravelDocument {
 	}
 
 	/**
-	 * Sets the price
+	 * Sets the price.
 	 *
 	 * @param price the new price
 	 */
@@ -77,9 +79,9 @@ public abstract class TravelDocument {
 	}
 
 	/**
-	 * Code generate
+	 * Code generation.
 	 *
-	 * @return the string
+	 * @return the string with the code
 	 */
 	private String codeGenerate() {
 		String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";

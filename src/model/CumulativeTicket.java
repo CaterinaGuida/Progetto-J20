@@ -1,7 +1,7 @@
 package model;
 
 /**
- * class that manages cumulative tickets
+ * Class that manages cumulative tickets.
  * 
  * @author matte
  */
@@ -10,7 +10,7 @@ public class CumulativeTicket extends TravelDocument {
 	private int tripsNumber;
 
 	/**
-	 * Instantiates a new cumulative ticket
+	 * Instantiates a new cumulative ticket.
 	 *
 	 * @param tripsNumber the trips number
 	 */
@@ -20,7 +20,7 @@ public class CumulativeTicket extends TravelDocument {
 	}
 
 	/**
-	 * Gets the trips number
+	 * Gets the trips number.
 	 *
 	 * @return the trips number
 	 */
@@ -29,7 +29,7 @@ public class CumulativeTicket extends TravelDocument {
 	}
 
 	/**
-	 * Sets the trips number
+	 * Sets the trips number.
 	 *
 	 * @param tripsNumber the new trips number
 	 */

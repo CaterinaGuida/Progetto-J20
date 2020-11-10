@@ -1,7 +1,9 @@
 package model;
 
 /**
- * The Class SingleTicket.
+ * Class that manages single tickets.
+ * 
+ * @author matte
  */
 public class SingleTicket extends TravelDocument {
 

@@ -2,19 +2,13 @@ package model;
 
 import java.util.Date;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Class Pass.
+ * Class that manages passes.
  */
 public class Pass extends TravelDocument {
 	
-	/** The first name. */
 	private String firstName;
-	
-	/** The last name. */
 	private String lastName;
-	
-	/** The duration. */
 	private Duration duration;
 
 	/**

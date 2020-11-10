@@ -1,15 +1,8 @@
 package model;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Enum Duration.
+ * Enumeration with the duration.
  */
-public enum Duration {
-	
-	/** The weekly. */
-	WEEKLY, 
- /** The monthly. */
- MONTHLY, 
- /** The annual. */
- ANNUAL;
+public enum Duration {	
+	WEEKLY, MONTHLY, ANNUAL;
 }
