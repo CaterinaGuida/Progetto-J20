@@ -25,13 +25,13 @@ public class Pass extends TravelDocument {
 		this.duration = duration;
 		this.expirationDate = (Date) this.purchaseDate.clone();
 		
-		if(duration == Duration.WEEKLY)
+		if(duration == Duration.SETTIMANALE)
 			this.expirationDate.setDate(this.purchaseDate.getDate()+7);
 		
-		if(duration == Duration.MONTHLY)
+		if(duration == Duration.MENSILE)
 			this.expirationDate.setMonth(this.purchaseDate.getMonth()+1);
 		
-		if(duration == Duration.ANNUAL)
+		if(duration == Duration.ANNUALE)
 			this.expirationDate.setYear(this.purchaseDate.getYear()+1);
 	}
 
