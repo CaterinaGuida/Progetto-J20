@@ -7,6 +7,8 @@ import java.sql.Statement;
 
 /**
  * class that accesses the database to check the identity of an inspector
+ * 
+ * @author matte
  */
 public class DaoLogin {
 

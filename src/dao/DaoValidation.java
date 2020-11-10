@@ -1,5 +1,3 @@
-/* CLASSE CHE ACCEDE AL DATABASE PER VERIFICARE LA VALIDITA' DI UN TITOLO DI VIAGGIO */
-
 package dao;
 
 import java.sql.Connection;
@@ -12,6 +10,8 @@ import java.util.Date;
 
 /**
  * class that accesses the database to check the validity of a travel document
+ * 
+ * @author matte
  */
 public class DaoValidation {
 

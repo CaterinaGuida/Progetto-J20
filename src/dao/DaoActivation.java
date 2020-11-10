@@ -10,6 +10,8 @@ import java.util.Date;
 
 /**
  * class that accesses the database to store the activation of a travel document
+ * 
+ * @author matte
  */
 public class DaoActivation {
 	

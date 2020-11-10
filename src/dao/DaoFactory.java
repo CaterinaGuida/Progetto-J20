@@ -5,9 +5,8 @@ import java.sql.*;
 /**
  * class that establishes a connection with the database
  *
- * @author mateo
+ * @author matte
  */
-
 public class DaoFactory {
 	
 	/** The instance */

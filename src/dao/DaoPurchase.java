@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 
 /**
  * class that accesses the database to store the purchase of a travel document
+ * 
+ * @author matte
  */
 public class DaoPurchase {
 	
