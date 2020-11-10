@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 import dao.*;
 
 /**
- * class that handles a user's request to activate a travel document
+ * Class that handles the user's request to activate a travel document.
  * 
  * @author matte
  */
 public class ActivationServlet extends HttpServlet {
 	
 	/**
-	 * method that receives the code entered by the user
-	 * and then passes control to the page activation.jsp
+	 * Method that receives the code entered by the user
+	 * and then passes control to the page activation.jsp.
 	 *
 	 * @param req the request
 	 * @param res2 the response
@@ -34,7 +34,6 @@ public class ActivationServlet extends HttpServlet {
 			req.getSession().setAttribute("output", output);
 			req.getRequestDispatcher("/activation.jsp").forward(req, res2);
 		} catch (IOException | ParseException | ServletException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

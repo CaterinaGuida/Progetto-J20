@@ -10,16 +10,16 @@ import dao.DaoFactory;
 import dao.DaoLogin;
 
 /**
- * class that handles a inspector's request to authenticate within the system
+ * Class that handles the inspector's request to authenticate within the system.
  * 
  * @author matte
  */
 public class LoginServlet extends HttpServlet{
 	
 	/**
-	 * method that receives the username and password entered by the inspector,
+	 * Method that receives the username and password entered by the inspector,
 	 * compares them with the values stored in the database
-	 * and then passes control to the right jsp page
+	 * and then passes control to the right jsp page.
 	 *
 	 * @param req the request
 	 * @param res2 the response

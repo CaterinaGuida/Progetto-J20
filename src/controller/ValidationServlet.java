@@ -10,15 +10,15 @@ import dao.DaoValidation;
 import dao.DaoFactory;
 
 /**
- * class that handles a inspector's request to check the validity a travel document
+ * Class that handles a inspector's request to check the validity a travel document.
  * 
  * @author matte
  */
 public class ValidationServlet extends HttpServlet {
 	
 	/**
-	 * method that receives the code entered by the inspector
-	 * and then passes control to the page validation.jsp
+	 * Method that receives the code entered by the inspector
+	 * and then passes control to the page validation.jsp.
 	 *
 	 * @param req the request
 	 * @param res2 the response

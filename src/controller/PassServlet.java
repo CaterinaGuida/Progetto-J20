@@ -9,16 +9,16 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.*;
 
 /**
- * class that handles a user's request to purchase a pass
+ * Class that handles the user's request to purchase a pass.
  *  
  * @author matte
  */
 public class PassServlet extends HttpServlet {
 
 	/**
-	 * method that instantiates an object of the Pass class,
+	 * Method that instantiates an object of the Pass class,
 	 * stores it in the database using the addPass method,
-	 * generates a receipt in PDF format and returns it to the user
+	 * generates a receipt in PDF format and returns it to the user.
 	 *
 	 * @param req the request
 	 * @param res2 the response
