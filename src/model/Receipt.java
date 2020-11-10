@@ -9,23 +9,18 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 
 /**
- * The Class Receipt.
+ * Class that manages the receipts.
+ * 
+ * @author matte
  */
 public class Receipt {
     
-    /** The cat font. */
     private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 28, Font.BOLD);
-    
-    /** The red font. */
-    private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL, BaseColor.RED);
-    
-    /** The sub font. */
+    private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL, BaseColor.BLACK);
     private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL);
+    private static Font smallB = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, BaseColor.BLACK);
     
-    /** The small B. */
-    private static Font smallB = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, BaseColor.BLUE);
-    
-    /** The path. */
+    /** The path where is stored the file logo.png. */
     private String path =  "C:\\Users\\matte\\eclipse-workspace\\Progetto-J20\\WebContent\\static\\logo.png";
     
     /**
@@ -68,16 +63,12 @@ public class Receipt {
 			document.add(new Paragraph("Si ricorda che è obbligatorio l'uso della mascherina a bordo!", redFont));
 			document.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return bout;
@@ -116,16 +107,12 @@ public class Receipt {
 			document.add(new Paragraph("Si ricorda che è obbligatorio l'uso della mascherina a bordo!", redFont));
 			document.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return bout;
@@ -167,16 +154,12 @@ public class Receipt {
 			document.add(new Paragraph("Si ricorda che è obbligatorio l'uso della mascherina a bordo!", redFont));
 			document.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return bout;
