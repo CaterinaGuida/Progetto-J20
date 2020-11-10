@@ -1,5 +1,3 @@
-/* CLASSE CHE ACCEDE AL DATABASE PER VERIFICARE L'IDENTITA' DI UN CONTROLLORE */
-
 package dao;
 
 import java.sql.Connection;
@@ -7,15 +5,30 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * class that accesses the database to check the identity of an inspector
+ */
 public class DaoLogin {
 
 	private DaoFactory Dao;
 
+	/**
+	 * Instantiates a new dao login
+	 *
+	 * @param Dao the dao
+	 */
 	public DaoLogin(DaoFactory Dao) {
 		super();
 		this.Dao = Dao;
 	}
 	
+	/**
+	 * Login
+	 *
+	 * @param username the username
+	 * @param password the password
+	 * @return true, if successful
+	 */
 	public boolean login(String username, String password) {
 		Connection con;
 		try {

@@ -10,16 +10,30 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * class that accesses the database to check the validity of a travel document
+ */
 public class DaoValidation {
 
 	private DaoFactory Dao;
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
+	/**
+	 * Instantiates a new dao validation
+	 *
+	 * @param Dao the dao
+	 */
 	public DaoValidation(DaoFactory Dao) {
 		super();
 		this.Dao = Dao;
 	}
 	
+	/**
+	 * Validation
+	 *
+	 * @param code the code
+	 * @return the string[]
+	 */
 	public String[] validation(String code) {
 		Connection con;
 		try {
@@ -146,7 +160,6 @@ public class DaoValidation {
 			}
 			return null;
 		} catch (SQLException | ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;

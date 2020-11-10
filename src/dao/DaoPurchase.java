@@ -1,21 +1,32 @@
-/* CLASSE CHE ACCEDE AL DATABASE PER MEMORIZZARE L'ACQUISTO DI UN TITOLO DI VIAGGIO */
-
 package dao;
 
 import java.sql.*;
 import model.*;
 import java.text.SimpleDateFormat;
 
+/**
+ * class that accesses the database to store the purchase of a travel document
+ */
 public class DaoPurchase {
 	
 	private DaoFactory Dao;
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
+	/**
+	 * Instantiates a new dao purchase
+	 *
+	 * @param Dao the dao
+	 */
 	public DaoPurchase(DaoFactory Dao) {
 		super();
 		this.Dao = Dao;
 	}
 	
+	/**
+	 * Adds the single ticket
+	 *
+	 * @param tic the ticket
+	 */
 	public void addSingleTicket(SingleTicket tic) {	
 		try {
 			Connection con = Dao.getConnection();
@@ -28,6 +39,11 @@ public class DaoPurchase {
 		}
 	}
 
+	/**
+	 * Adds the cumulative ticket
+	 *
+	 * @param tic the ticket
+	 */
 	public void addCumulativeTicket(CumulativeTicket tic) {
 		try {
 			Connection con = Dao.getConnection();
@@ -40,6 +56,11 @@ public class DaoPurchase {
 		}
 	}
 	
+	/**
+	 * Adds the pass
+	 *
+	 * @param tic the ticket
+	 */
 	public void addPass(Pass tic) {
 		try {
 			Connection con = Dao.getConnection();

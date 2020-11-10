@@ -1,5 +1,3 @@
-/* CLASSE CHE ACCEDE AL DATABASE PER MEMORIZZARE L'ATTIVAZIONE DI UN TITOLO DI VIAGGIO */
-
 package dao;
 
 import java.sql.Connection;
@@ -10,16 +8,31 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * class that accesses the database to store the activation of a travel document
+ */
 public class DaoActivation {
 	
 	private DaoFactory Dao;
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
+	/**
+	 * Instantiates a new dao activation
+	 *
+	 * @param Dao the dao
+	 */
 	public DaoActivation(DaoFactory Dao) {
 		super();
 		this.Dao = Dao;
 	}
 
+	/**
+	 * Activation
+	 *
+	 * @param code the code
+	 * @return the string[]
+	 * @throws ParseException the parse exception
+	 */
 	public String[] activation(String code) throws ParseException {
 		Connection con;
 		try {
@@ -166,7 +179,6 @@ public class DaoActivation {
 			}
 			return null;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
