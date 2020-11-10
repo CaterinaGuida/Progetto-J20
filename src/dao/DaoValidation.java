@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * class that accesses the database to check the validity of a travel document
+ * Class that accesses the database to check the validity of a travel document.
  * 
  * @author matte
  */
@@ -19,7 +19,7 @@ public class DaoValidation {
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
 	/**
-	 * Instantiates a new dao validation
+	 * Instantiates a new dao validation.
 	 *
 	 * @param Dao the dao
 	 */
@@ -29,10 +29,10 @@ public class DaoValidation {
 	}
 	
 	/**
-	 * Validation
+	 * Method that manages the validation.
 	 *
 	 * @param code the code
-	 * @return the string[]
+	 * @return the string[] containing the result of the validation
 	 */
 	public String[] validation(String code) {
 		Connection con;

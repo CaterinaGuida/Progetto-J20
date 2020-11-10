@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * class that accesses the database to check the identity of an inspector
+ * Class that accesses the database to check the identity of an inspector.
  * 
  * @author matte
  */
@@ -15,7 +15,7 @@ public class DaoLogin {
 	private DaoFactory Dao;
 
 	/**
-	 * Instantiates a new dao login
+	 * Instantiates a new dao login.
 	 *
 	 * @param Dao the dao
 	 */
@@ -25,7 +25,7 @@ public class DaoLogin {
 	}
 	
 	/**
-	 * Login
+	 * Method that manages the login.
 	 *
 	 * @param username the username
 	 * @param password the password

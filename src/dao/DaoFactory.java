@@ -3,26 +3,19 @@ package dao;
 import java.sql.*;
 
 /**
- * class that establishes a connection with the database
+ * Class that establishes a connection with the database.
  *
  * @author matte
  */
 public class DaoFactory {
 	
-	/** The instance */
 	static DaoFactory instance;
-	
-	/** The url */
 	private String url;
-	
-	/** The username */
 	private String username;
-	
-	/** The password */
 	private String password;
 	
 	/**
-	 * Instantiates a new dao factory
+	 * Instantiates a new dao factory.
 	 *
 	 * @param url the url
 	 * @param username the username
@@ -35,7 +28,7 @@ public class DaoFactory {
 	}
 	
 	/**
-	 * Gets the single instance of DaoFactory
+	 * Gets the single instance of DaoFactory.
 	 *
 	 * @return single instance of DaoFactory
 	 */
@@ -45,7 +38,7 @@ public class DaoFactory {
 	}
 	
 	/**
-	 * Gets the connection
+	 * Gets the connection.
 	 *
 	 * @return the connection
 	 * @throws SQLException the SQL exception
@@ -57,7 +50,7 @@ public class DaoFactory {
 	
 	
 	/**
-	 * Gets the dao purchase
+	 * Gets the dao purchase.
 	 *
 	 * @return the dao purchase
 	 */
@@ -66,7 +59,7 @@ public class DaoFactory {
 	}
 
 	/**
-	 * Gets the dao activation
+	 * Gets the dao activation.
 	 *
 	 * @return an instance of DaoActivation
 	 */
@@ -75,7 +68,7 @@ public class DaoFactory {
 	}
 	
 	/**
-	 * Gets the dao login
+	 * Gets the dao login.
 	 * 
 	 * @return an instance of DaoLogin
 	 */
@@ -84,7 +77,7 @@ public class DaoFactory {
 	}
 	
 	/**
-	 * Gets the dao validation
+	 * Gets the dao validation.
 	 *
 	 * @return an instance of DaoValidation
 	 */

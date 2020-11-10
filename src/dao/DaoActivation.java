@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * class that accesses the database to store the activation of a travel document
+ * Class that accesses the database to store the activation of a travel document.
  * 
  * @author matte
  */
@@ -19,7 +19,7 @@ public class DaoActivation {
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
 	/**
-	 * Instantiates a new dao activation
+	 * Instantiates a new dao activation.
 	 *
 	 * @param Dao the dao
 	 */
@@ -29,10 +29,10 @@ public class DaoActivation {
 	}
 
 	/**
-	 * Activation
+	 * Method that manages the activation.
 	 *
 	 * @param code the code
-	 * @return the string[]
+	 * @return the string[] containing the result of activation
 	 * @throws ParseException the parse exception
 	 */
 	public String[] activation(String code) throws ParseException {

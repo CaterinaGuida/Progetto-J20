@@ -5,7 +5,7 @@ import model.*;
 import java.text.SimpleDateFormat;
 
 /**
- * class that accesses the database to store the purchase of a travel document
+ * Class that accesses the database to store the purchase of a travel document.
  * 
  * @author matte
  */
@@ -15,7 +15,7 @@ public class DaoPurchase {
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
 	/**
-	 * Instantiates a new dao purchase
+	 * Instantiates a new dao purchase.
 	 *
 	 * @param Dao the dao
 	 */
@@ -25,7 +25,7 @@ public class DaoPurchase {
 	}
 	
 	/**
-	 * Adds the single ticket
+	 * Method that manages the purchase of a single ticket.
 	 *
 	 * @param tic the ticket
 	 */
@@ -42,7 +42,7 @@ public class DaoPurchase {
 	}
 
 	/**
-	 * Adds the cumulative ticket
+	 * Method that manages the purchase of a cumulative ticket.
 	 *
 	 * @param tic the ticket
 	 */
@@ -59,7 +59,7 @@ public class DaoPurchase {
 	}
 	
 	/**
-	 * Adds the pass
+	 * Method that manages the purchase of a pass.
 	 *
 	 * @param tic the ticket
 	 */
