@@ -1,5 +1,3 @@
-/* Questo test permette di verificare il controllo di un titolo di viaggio */
-
 package testUnit;
 
 import static org.junit.Assert.*;
@@ -9,8 +7,16 @@ import org.junit.Test;
 import dao.*;
 import model.*;
 
+/**
+ * Class that verifies the validation of a travel document.
+ * 
+ * @author matte
+ */
 public class ValidationTest {
 	
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		DaoFactory dao = DaoFactory.getInstance();
@@ -28,7 +34,6 @@ public class ValidationTest {
 			da.activation(code);
 			assertEquals("Titolo valido", daov.validation(code)[0]);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}

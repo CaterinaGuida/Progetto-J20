@@ -1,5 +1,3 @@
-/* Questo test permette di verificare il processo di authenticazione */
-
 package testUnit;
 
 import static org.junit.Assert.*;
@@ -7,8 +5,16 @@ import java.sql.*;
 import org.junit.Test;
 import dao.*;
 
+/**
+ * Class that verifies the inspector's autentication process.
+ * 
+ * @author matte
+ */
 public class LoginTest {
 	
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() { 
 		String username = "aoeojd";
@@ -27,7 +33,6 @@ public class LoginTest {
 			query = String.format("delete from inspectors where username = '%s'", username);
 			st.executeUpdate(query);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

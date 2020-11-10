@@ -1,5 +1,3 @@
-/* Questo test permette di verificare l'attivazione di un titolo di viaggio */
-
 package testUnit;
 
 import static org.junit.Assert.*;
@@ -9,8 +7,16 @@ import org.junit.Test;
 import dao.*;
 import model.*;
 
+/**
+ * Class that verifies the activation of a travel document.
+ * 
+ * @author matte
+ */
 public class ActivationTest {
 	
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		DaoFactory dao = DaoFactory.getInstance();
@@ -31,7 +37,6 @@ public class ActivationTest {
 			assertEquals("Titolo attivato 2", output[0]);
 			assertEquals(4,	Integer.parseInt(output[3]));
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

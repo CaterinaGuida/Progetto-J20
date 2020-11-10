@@ -1,5 +1,3 @@
-/* Questo test permette di verificare la registrazione di un titolo di viaggio nel database */
-
 package testUnit;
 
 import static org.junit.Assert.*;
@@ -8,8 +6,16 @@ import org.junit.Test;
 import dao.*;
 import model.*;
 
+/**
+ * Class that verifies the purchase of a travel document.
+ * 
+ * @author matte
+ */
 public class PurchaseTest {
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		DaoFactory dao = DaoFactory.getInstance();
@@ -32,7 +38,6 @@ public class PurchaseTest {
 			st.executeUpdate(query);
 			assertEquals(1, number);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
