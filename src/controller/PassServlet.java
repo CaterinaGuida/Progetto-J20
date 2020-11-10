@@ -32,12 +32,12 @@ public class PassServlet extends HttpServlet {
 			DaoFactory dao = DaoFactory.getInstance();
 			DaoPurchase daop = dao.getDaoPurchase();
 			
-			Pass pass1 = new Pass(Duration.ANNUAL, firstName, lastName);
+			Pass pass1 = new Pass(Duration.ANNUALE, firstName, lastName);
 			
 			if(duration.equals("SETTIMANALE")) {
-				pass1 = new Pass(Duration.WEEKLY, firstName, lastName);
+				pass1 = new Pass(Duration.SETTIMANALE, firstName, lastName);
 			} else if(duration.equals("MENSILE")) {
-				pass1= new Pass(Duration.MONTHLY, firstName, lastName);
+				pass1= new Pass(Duration.MENSILE, firstName, lastName);
 			}
 
 			daop.addPass(pass1);
