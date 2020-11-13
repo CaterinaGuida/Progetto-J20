@@ -14,21 +14,21 @@ import com.itextpdf.text.pdf.PdfWriter;
  * @author matte
  */
 public class Receipt {
-    
-    private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 28, Font.BOLD);
-    private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL, BaseColor.RED);
-    private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL);
-    private static Font smallB = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, BaseColor.BLACK);
-    
-    /** The path where is stored the file logo.png. */
-    private String path =  "C:\\Users\\matte\\eclipse-workspace\\Progetto-J20\\WebContent\\static\\logo.png";
-    
-    /**
-     * Instantiates a new receipt.
-     */
-    public Receipt() {
-    	
-    }
+
+	private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 28, Font.BOLD);
+	private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, BaseColor.RED);
+	private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL);
+	private static Font smallB = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD, BaseColor.BLACK);
+
+	/** The path where is stored the file logo.png. */
+	private String path = "C:\\Users\\matte\\eclipse-workspace\\Progetto-J20\\WebContent\\static\\logo.png";
+
+	/**
+	 * Instantiates a new receipt.
+	 */
+	public Receipt() {
+
+	}
 
 	/**
 	 * Generate single ticket.
@@ -102,7 +102,8 @@ public class Receipt {
 			document.add(new Paragraph("Numero di viaggi disponibili: \t" + travel.getTripsNumber(), subFont));
 			document.add(new Paragraph("Prezzo: \t" + travel.getPrice() + "€", subFont));
 			document.add(new Paragraph(" "));
-			document.add(new Paragraph("Il presente biglietto può essere attivato " + travel.getTripsNumber() + " volte ed è valido un'ora dal momento dell'attivazione.", smallB));
+			document.add(new Paragraph("Il presente biglietto può essere attivato " + travel.getTripsNumber()
+					+ " volte ed è valido un'ora dal momento dell'attivazione.", smallB));
 			document.add(new Paragraph(" "));
 			document.add(new Paragraph("Si ricorda che è obbligatorio l'uso della mascherina a bordo!", redFont));
 			document.close();
@@ -117,7 +118,7 @@ public class Receipt {
 		}
 		return bout;
 	}
-	
+
 	/**
 	 * Generate pass.
 	 *
@@ -141,15 +142,17 @@ public class Receipt {
 			document.add(new Paragraph(" "));
 			document.add(new Paragraph("Codice: \t" + travel.getTicketCode(), subFont));
 			document.add(new Paragraph(""));
-			document.add(new Paragraph("Nome del proprietario: \t" + travel.getFirstName(), subFont));
-			document.add(new Paragraph("Cognome del proprietario: \t" + travel.getLastName(), subFont));
+			document.add(new Paragraph("Nome: \t" + travel.getFirstName(), subFont));
+			document.add(new Paragraph("Cognome: \t" + travel.getLastName(), subFont));
 			document.add(new Paragraph("Durata di validità: \t" + travel.getDuration(), subFont));
 			document.add(new Paragraph("Data di acquisto: \t" + sdf.format(travel.getPurchaseDate()), subFont));
 			document.add(new Paragraph("Orario di acquisto: \t" + sdf2.format(travel.purchaseDate), subFont));
 			document.add(new Paragraph("Scadenza: \t" + sdf.format(travel.getExpirationDate()), subFont));
 			document.add(new Paragraph("Prezzo: \t" + travel.getPrice() + "€", subFont));
 			document.add(new Paragraph(" "));
-			document.add(new Paragraph("Il presente abbonamento consente l'uso illimitato dei mezzi urbani per tutto il suo periodo di validità.", smallB));
+			document.add(new Paragraph(
+					"Il presente abbonamento consente l'uso illimitato dei mezzi urbani per tutto il suo periodo di validità.",
+					smallB));
 			document.add(new Paragraph(" "));
 			document.add(new Paragraph("Si ricorda che è obbligatorio l'uso della mascherina a bordo!", redFont));
 			document.close();
