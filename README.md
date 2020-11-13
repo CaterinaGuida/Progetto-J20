@@ -20,7 +20,7 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 
 7) Cliccare (*File* -> *Open SQL Script...*) e selezionare lo script "*query.sql*"
 
-8) Modificare i campi *name* e *pass* con delle credenziali a piacere (saranno le credenziali di accesso al sistema di un controllore)
+8) Creare un nuovo **controllore**, sostituendo ai campi *name* e *pass* le proprie credenziali di accesso al sistema (scelte a piacere)
 
 9) Eseguire lo script per aggiungere il nuovo controllore al database
 
