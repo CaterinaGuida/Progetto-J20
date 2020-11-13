@@ -34,7 +34,7 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 
    3.1) Cliccare (*Window* -> *Preferences* -> *Server* -> *Runtime Environments* -> *Add*)
 
-   3.2) Selezionare Apache Tomcat v8.5 e cliccare su *Next*
+   3.2) Selezionare *Apache Tomcat v8.5* e cliccare su *Next*
 
    3.3) Cliccare *Browse* e selezionare la directory in cui è stato installato Apache Tomcat 8.5
    
@@ -42,13 +42,13 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 
    3.5) Cliccare (*Window* -> *Show View* -> *Other...* -> *Server* -> *Servers* -> *Open*)
 
-   3.6) Cliccare *No servers are available* nel riquadro in basso
+   3.6) Cliccare *No servers are available* nel riquadro che compare in basso
 
    3.7) Cliccare (*Next* -> *Add* -> *Finish*)
 
    3.8) Fare doppio click su *Tomcat v8.5 Server at localhost* nel riquadro in basso
 
-   3.9) Impostare il campo *Tomcat admin port* con 9090 e salvare
+   3.9) Impostare il campo *Tomcat admin port* con **9090** e salvare
 
 ## Esecuzione dell'applicazione
 
@@ -62,7 +62,7 @@ Il progetto ha come obiettivo la realizzazione di un sistema per l’emissione e
 
 5) A questo punto, cliccare con il tasto destro su *index.jsp*, spostarsi su *Run As* e cliccare su *Run on Server*
 
-6) Copiare il link su un browser
+6) Per una migliore visualizzazione, fare copia e incolla del link (http://localhost:8080/urban/index.jsp) su un browser
 
 # LIBRERIE UTILIZZATE
 
