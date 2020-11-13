@@ -142,6 +142,7 @@
          height:150px;
          background-size:100% 150px;
          }
+         }
          @media only screen and (max-width: 600px){
          a{
          font-size:0.9em;
